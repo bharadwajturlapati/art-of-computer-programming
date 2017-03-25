@@ -79,7 +79,7 @@ public class DemoPublisherSubscriberModel implements javax.jms.MessageListener {
       PropertyBuilder propertiesBean = new PropertyBuilder();
       propertiesBean.setContextQueue("example.MyQueue");
       propertiesBean.setInitialContextFactory("org.apache.activemq.jndi.ActiveMQInitialContextFactory");
-      propertiesBean.setProviderUrl("vm://localhost");
+      propertiesBean.setProviderUrl("tcp://localhost:61616");
       propertiesBean.setTopicName("example.topicConnectionFactory");
       Properties props = propertiesBean.buildProperties();
       DemoPublisherSubscriberModel demo = new DemoPublisherSubscriberModel(

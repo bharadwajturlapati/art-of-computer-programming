@@ -1,0 +1,5 @@
+1. Import exsisting folder as eclipse project 
+Link : 
+http://stackoverflow.com/questions/4170963/how-to-make-an-existing-directory-into-an-eclipse-project
+Description:
+In the New Java Project wizard, uncheck the checkbox that says Use default location and the use the Browse button to find your directory.

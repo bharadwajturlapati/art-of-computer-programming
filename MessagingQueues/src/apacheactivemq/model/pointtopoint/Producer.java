@@ -1,4 +1,4 @@
-package apacheactivemq;
+package apacheactivemq.model.pointtopoint;
 
 import javax.jms.*;
 import javax.naming.InitialContext;

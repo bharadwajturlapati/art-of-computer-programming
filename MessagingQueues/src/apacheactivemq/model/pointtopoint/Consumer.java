@@ -1,4 +1,4 @@
-package apacheactivemq;
+package apacheactivemq.model.pointtopoint;
 
 import javax.jms.*;
 import org.apache.activemq.ActiveMQConnection;

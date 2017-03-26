@@ -15,9 +15,13 @@ public class Trigger {
     topicConsumerthread.start();
     try {
       Thread.sleep(1000);
-      System.out.println("End of Program");
+      System.out.println("Consumer Started , Producer will start");
     } catch (Exception e) {
       e.printStackTrace();
     }
+    
+    Thread topicProducerThread = new Thread(new TopicProducer(
+        connectionFactory));
+    topicProducerThread.start();
   }
 }

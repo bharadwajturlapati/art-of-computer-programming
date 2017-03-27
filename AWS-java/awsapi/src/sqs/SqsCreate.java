@@ -1,7 +1,5 @@
 package sqs;
 
-import com.amazonaws.client.builder.AwsClientBuilder;
-import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
@@ -16,15 +14,15 @@ public class SqsCreate {
   }
 
   public void Create() {
-    AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
-    /*Region usWest2 = Region.getRegion(Regions.US_WEST_2);
-    sqs.setRegion(usWest2);*/
+    AmazonSQS sqs = AmazonSQSClientBuilder.standard()
+         .withRegion(Regions.US_WEST_1).build();
     CreateQueueRequest create_request = new CreateQueueRequest(QUEUE_NAME)
         .addAttributesEntry("DelaySeconds", "60")
         .addAttributesEntry("MessageRetentionPeriod", "86400");
     
     try {
       sqs.createQueue(create_request);
+      System.out.println("Queue has been created in the region");
     } catch (AmazonSQSException amazonSQSException) {
       if (!amazonSQSException.getErrorCode().equals("QueueAlreadyExists")) {
         throw amazonSQSException;

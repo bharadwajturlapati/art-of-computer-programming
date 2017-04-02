@@ -10,9 +10,7 @@ public class RunnableDemo implements Runnable {
     System.out.println("In Constructor, thread created name " + threadName);
   }
 
-  @Override
   public void run() {
-    // TODO Auto-generated method stub
     System.out.println("Running thread " + threadName);
     try {
       for (int i = 0; i < 4; i++) {

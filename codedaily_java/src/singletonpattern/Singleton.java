@@ -19,6 +19,10 @@ public class Singleton {
         }
       }
     }
+    else{
+      // failing this on purpose. This is not a part of the desgin
+      singletonInstance = null;
+    }
     return singletonInstance;
   }
 

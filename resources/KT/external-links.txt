@@ -3,3 +3,12 @@ Link :
 http://stackoverflow.com/questions/4170963/how-to-make-an-existing-directory-into-an-eclipse-project
 Description:
 In the New Java Project wizard, uncheck the checkbox that says Use default location and the use the Browse button to find your directory.
+
+
+2. how to convert an exsisting java project into a maven project
+Sol: 
+Right Click on the project -> select configure -> update project to maven project.
+
+3. How to check for transitive dependencies in maven.
+Sol:
+mvn dependency:tree

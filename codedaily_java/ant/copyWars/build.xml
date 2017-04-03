@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CopyWars" default="copy" basedir=".">
+	<description>Simple ant file to copy generated wars to tomcat in autodeploy mode</description>
+	<property file="copy.properties" />
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+	<target name="copy">
+		<property name="copywar" value="middleware,admin,services" />
+		<property name="backup" value="true" />
+		<echo message="copying ${copywar} to tomcat with is backup required ${backup}" />
+		<if>
+			<equals arg1="${backup}" arg2="true" />
+			<then>
+				<echo message="copying started" />
+				<tstamp>
+					<format property="folderID" pattern="dd-MM-yyyy-HH-mm-ss" />
+				</tstamp>
+				<mkdir dir="${tomcat.path}\${folderID}" />
+				<for list="${copywar}" param="war">
+					<sequential>
+						<move file="${tomcat.path}\webapps\@{war}.war" todir="${tomcat.path}\${folderID}">
+						</move>
+					</sequential>
+				</for>
+				<for list="${copywar}" param="war">
+					<sequential >
+						<delete  failonerror ="false" dir="${tomcat.path}\webapps\@{war}">
+						</delete>
+					</sequential>
+				</for>
+				<for list="${copywar}" param="war">
+					<sequential>
+						<copy todir="${tomcat.path}\webapps" file="${@{war}.path}">
+						</copy>
+					</sequential>
+				</for>
+			</then>
+			<else>
+				<echo message="without backup copy will not be performed" />
+			</else>
+		</if>
+	</target>
+</project>

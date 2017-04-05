@@ -1,0 +1,16 @@
+{
+  "name": "node-oauth2server",
+  "version": "1.0.0",
+  "description": "oauth2 mechanism",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "tbj.name@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "node-oauth2-server": "^2.4.0"
+  }
+}

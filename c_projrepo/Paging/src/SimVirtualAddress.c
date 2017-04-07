@@ -6,14 +6,15 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int main() {
+
+int main(int argc, char *argv[]) {
 	unsigned long page;
 	unsigned long offset;
 	unsigned long address;
 
-	unsigned long getInput;
-	address = atoll(getInput);
+	address = atoll(argv[1]);
 	/* Page Number =  quotient of  address / 4KB and offset = remainder*/
 	/*Below is the faster method of calculating the same*/
 

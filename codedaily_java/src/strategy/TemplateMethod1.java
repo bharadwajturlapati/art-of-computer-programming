@@ -1,5 +1,7 @@
 package strategy;
 
+import strategy.Strategy;
+
 abstract class TemplateMethod1 implements Strategy {
   public void solve() {
     start();

@@ -1,0 +1,2 @@
+This is very important to write frameworks.
+Casting underlying implementation to a generic interface.

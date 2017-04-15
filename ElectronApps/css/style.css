@@ -1,0 +1,29 @@
+.flex-container {
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.default-flex-item {
+	width: 256px;
+	height: 256px;
+	margin: 10px;
+	border-style: solid;
+	border-width: thin;
+}
+
+.default-flex-item>div {
+	border-style: dashed;
+	border-width: thin;
+	border-color: cornflowerblue;
+	margin: 10px;
+	width: 90%;
+	height: 90%;
+}
+
+.default-flex-item>div>button {
+	position: relative;
+	top: 43%;
+	left: 43%;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WorkSpace Enhancer</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/init.js"></script>
+<script>
+	$ts.preinit();
+</script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body onload="$ts.init()">
+	<div class="container">
+		<h2>WorkSpace Enhancer</h2>
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+			<li><a data-toggle="tab" href="#workspace">Workspace</a></li>
+			<li><a data-toggle="tab" href="#live-browser">Live browser</a></li>
+			<li><a data-toggle="tab" href="#todo-list">Todo List</a></li>
+			<li><a data-toggle="tab" href="#api-management">API
+					Management</a></li>
+			<li><a data-toggle="tab" href="#find-in-path">FIP</a></li>
+			<li><a data-toggle="tab" href="#open-my-tools">OWN</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="home" class="tab-pane fade in active">
+				<div class="flex-container">
+					<div id="dropable-template-box" class="default-flex-item">
+						<div>
+							<button id="upload-screenshot" type="button"
+								class="btn btn-default">
+								<span class="glyphicon glyphicon-plus"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="workspace" class="tab-pane fade">
+				<h3>Worspace</h3>
+				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
+					laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div id="live-browser" class="tab-pane fade">
+				<h3>Live browser</h3>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit
+					voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+			</div>
+			<div id="todo-list" class="tab-pane fade">
+				<h3>Todo List</h3>
+				<p>Eaque ipsa quae ab illo inventore veritatis et quasi
+					architecto beatae vitae dicta sunt explicabo.</p>
+			</div>
+			<div id="api-management" class="tab-pane fade">
+				<h3>API Management</h3>
+				<p>Eaque ipsa quae ab illo inventore veritatis et quasi
+					architecto beatae vitae dicta sunt explicabo.</p>
+			</div>
+			<div id="find-in-path" class="tab-pane fade">
+				<h3>Find in path</h3>
+				<p>Helps You to get where your environmental variables are
+					located</p>
+			</div>
+			<div id="open-my-tools" class="tab-pane fade">
+				<h3>OWN</h3>
+				<p>Helps You to open your tools on the fly with a single click</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

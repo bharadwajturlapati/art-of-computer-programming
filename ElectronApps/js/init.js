@@ -26,7 +26,7 @@ var $ts = {
 	    $networkUtils.ajax($staticModels.healthCheckURLConfig);
     },
     init : function() {
-    	$ts.isServerHealthy();
+	    $ts.isServerHealthy();
 	    $ts.fireRegisterDOMEvents();
     }
 }

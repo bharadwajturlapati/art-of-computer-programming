@@ -53,26 +53,5 @@ app.on('activate', () => {
     createWindow();
   }
 });
-
-/*function isServerHealthy() {
-	var {net} = require('electron');
-	var request = net.request('http://127.0.0.1:8000/health-check/');
-	request.on('response', (response) => {
-		console.log(response.statusCode);
-		if(response.statusCode == 200){
-			createWindow();
-		}
-	    console.log('STATUS: ${response.statusCode}');
-	    console.log('HEADERS: ${JSON.stringify(response.headers)}');
-	    response.on('data', (chunk) => {
-	      console.log('BODY: ${chunk}')
-	    });
-	    response.on('end', () => {
-	      console.log('No more data in response.')
-	    });
-	});
-	request.end();
-}*/
-
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.

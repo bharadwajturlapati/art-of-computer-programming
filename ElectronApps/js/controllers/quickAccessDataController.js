@@ -1,0 +1,5 @@
+var $quickAccessDC = {
+	loadData : function() {
+
+	}
+}

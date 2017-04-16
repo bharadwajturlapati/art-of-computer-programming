@@ -18,11 +18,16 @@
 
 <!-- Load  Utils-->
 <script src="js/utils/networkUtils.js"></script>
+<script src="js/utils/domUtils.js"></script>
+<!-- Load Handlers -->
+<script src="js/handlers/eventHandler.js"></script>
 <!-- Load Controllers -->
 <script src="js/controllers/mainController.js"></script>
+<script src="js/controllers/quickAccessDataController.js"></script>
 <!-- Load Models -->
 <script src="js/models/defaultStaticModels.js"></script>
 <script src="js/models/mainModel.js"></script>
+<script src="js/models/dialogModel.js"></script>
 <!-- Load views -->
 <script src="js/views/mainView.js"></script>
 <!-- End of scripts Hirarchy -->
@@ -31,7 +36,7 @@
 	<div class="container">
 		<h2>WorkSpace Enhancer</h2>
 		<ul class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+			<li class="active"><a data-toggle="tab" href="#quick-access">Quick Access</a></li>
 			<li><a data-toggle="tab" href="#workspace">Workspace</a></li>
 			<li><a data-toggle="tab" href="#live-browser">Live browser</a></li>
 			<li><a data-toggle="tab" href="#todo-list">Todo List</a></li>
@@ -42,10 +47,10 @@
 		</ul>
 
 		<div class="tab-content">
-			<div id="home" class="tab-pane fade in active">
+			<div id="quick-access" class="tab-pane fade in active">
 				<div class="flex-container">
 					<div id="dropable-template-box" class="default-flex-item">
-						<div>
+						<div id="dropable-area">
 							<button id="upload-screenshot" type="button"
 								class="btn btn-default">
 								<span class="glyphicon glyphicon-plus"></span>
@@ -53,7 +58,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="dialog" title="Uplaod Image">
+				<div id="dialog" title="Upload Image">
 					<form>
 						<div class="form-group">
 							<label for="inputdefault">Nick Name</label> <input
@@ -100,23 +105,6 @@
 				<p>Helps You to open your tools on the fly with a single click</p>
 			</div>
 		</div>
-		<!-- <div class="alert-container hide">
-			<div class="alert alert-success hide">
-				<strong>Success!</strong>
-				<div id="error-message"></div>
-			</div>
-			<div class="alert alert-info hide">
-				<strong>Info!</strong>
-				<div id="error-message"></div>
-			</div>
-			<div class="alert alert-warning hide">
-				<strong>Warning!</strong>
-				<div id="error-message"></div>
-			</div>
-			<div class="alert alert-danger hide">
-				<strong>Danger!</strong>
-				<div id="error-message"></div>
-			</div> -->
 	</div>
 </body>
 </html>

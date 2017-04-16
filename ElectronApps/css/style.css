@@ -1,4 +1,6 @@
 .flex-container {
+	position: relative;
+	top:10px;
 	display: -webkit-flex;
 	display: flex;
 	width: 100%;
@@ -6,26 +8,25 @@
 }
 
 .default-flex-item {
-	width: 256px;
-	height: 256px;
-	margin: 10px;
-	border-style: solid;
-	border-width: thin;
+	width: 150px;
+    height: 140px;
+    border-style: solid;
+    border-width: thin;
+    border-color: cornflowerblue;
+    background-color : none;
 }
 
-.default-flex-item>div {
-	border-style: dashed;
-	border-width: thin;
-	border-color: cornflowerblue;
-	margin: 10px;
-	width: 90%;
-	height: 90%;
+/* #dropable-template-box:hover {
+	background-color : cornflowerblue;
 }
+ */
 
-.default-flex-item>div>button {
-	position: relative;
-	top: 43%;
-	left: 43%;
+#upload-screenshot {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    margin: 0 auto;
 }
 
 /* .alert-container >div {

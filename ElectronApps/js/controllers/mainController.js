@@ -7,5 +7,8 @@ var $controller = {
 	    dialog.showOpenDialog({
 		    properties : ['openFile']
 	    }, config.callback);
+    },
+    loadAllData : function(config) {
+	    $quickAccessDC.loadData();
     }
 }

@@ -10,8 +10,22 @@
 <script>
 	$ts.preinit();
 </script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-ui.js"></script>
+<!--  Starts Scripts Hierarchy -->
+<!-- Load third Party Files First -->
+<script src="js/external/bootstrap.min.js"></script>
+<script src="js/external/jquery-ui.js"></script>
+<script src="js/external/notify.js"></script>
+
+<!-- Load  Utils-->
+<script src="js/utils/networkUtils.js"></script>
+<!-- Load Controllers -->
+<script src="js/controllers/mainController.js"></script>
+<!-- Load Models -->
+<script src="js/models/defaultStaticModels.js"></script>
+<script src="js/models/mainModel.js"></script>
+<!-- Load views -->
+<script src="js/views/mainView.js"></script>
+<!-- End of scripts Hirarchy -->
 </head>
 <body onload="$ts.init()">
 	<div class="container">
@@ -43,16 +57,16 @@
 					<form>
 						<div class="form-group">
 							<label for="inputdefault">Nick Name</label> <input
-								class="form-control" id="inputdefault" type="text">
+								class="form-control" id="pic-name" type="text">
 						</div>
 						<div class="form-group">
 							<label for="inputdefault">Logical Group</label> <input
-								class="form-control" id="inputdefault" type="text">
+								class="form-control" id="pic-group" type="text">
 						</div>
 						<button id="open-electron-dialog" type="button"
-						class="btn btn-default">
-						<span>Upload</span>
-					</button>
+							class="btn btn-default">
+							<span>Upload</span>
+						</button>
 					</form>
 				</div>
 			</div>
@@ -86,6 +100,23 @@
 				<p>Helps You to open your tools on the fly with a single click</p>
 			</div>
 		</div>
+		<!-- <div class="alert-container hide">
+			<div class="alert alert-success hide">
+				<strong>Success!</strong>
+				<div id="error-message"></div>
+			</div>
+			<div class="alert alert-info hide">
+				<strong>Info!</strong>
+				<div id="error-message"></div>
+			</div>
+			<div class="alert alert-warning hide">
+				<strong>Warning!</strong>
+				<div id="error-message"></div>
+			</div>
+			<div class="alert alert-danger hide">
+				<strong>Danger!</strong>
+				<div id="error-message"></div>
+			</div> -->
 	</div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 var $ts = {
     fireRegisterDOMEvents : function() {
-	    //$ts.registerDropEvent();
-    	$register.registerDialog();
+	    // $ts.registerDropEvent();
+	    $register.registerDialog($staticModels.defaultDialog);
 	    $ts.addButtonEvents();
     },
     registerDropEvent : function() {
@@ -15,48 +15,26 @@ var $ts = {
 		    $controller.fileUploadController();
 	    });
 	    $("#open-electron-dialog").on("click", function(event) {
-		    $controller.openElectronDialog();
+		    $controller.openElectronDialog($model.uploadConfig);
 	    });
     },
     preinit : function() {
+	    // Register Jquery
 	    window.jQuery = window.$ = require('jquery');
     },
+    isServerHealthy : function() {
+	    $networkUtils.ajax($staticModels.healthCheckURLConfig);
+    },
     init : function() {
+    	$ts.isServerHealthy();
 	    $ts.fireRegisterDOMEvents();
     }
 }
-
-var $controller = {
-    fileUploadController : function() {
-	    $model.prepareJqueryDialogModel(null);
-    },
-    openElectronDialog : function(config) {
-	    let dialog = require('electron').remote.dialog;
-	    dialog.showOpenDialog({
-		    properties : ['openFile']
-	    })
-	    console.log("File Upload Successful");
-    }
-}
-
-var $view = {
-	defaultDialog : {
-		type : 'openFile'
-	}
-}
-
-var $model = {
-	prepareJqueryDialogModel : function(config) {
-		$("#dialog").dialog("open");
-		event.preventDefault();
-	}
-}
-
 var $register = {
-	registerDialog : function() {
+	registerDialog : function(dialogConfig) {
 		$("#dialog").dialog({
-		    autoOpen : false,
-		    width : 400,
+		    autoOpen : dialogConfig.autoOpen,
+		    width : dialogConfig.width,
 		    buttons : [{
 		        text : "Ok",
 		        click : function() {

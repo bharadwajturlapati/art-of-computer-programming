@@ -9,6 +9,8 @@ var $ts = {
     init : function() {
 	    $ts.isServerHealthy();
 	    $registerEvents.initEvents();
+	    $view.loadSplashScreen();
 	    $controller.loadAllData();
+	    $view.dismissSplash();
     }
 }

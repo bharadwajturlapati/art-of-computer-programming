@@ -9,12 +9,15 @@
 #include <stdlib.h>
 
 
-int main(int argc, char *argv[]) {
+int main() {
 	unsigned long page;
 	unsigned long offset;
 	unsigned long address;
+	printf("Enter the virtual Address: ");
 
-	address = atoll(argv[1]);
+	int virtualAddress;
+	scanf("%d" ,&virtualAddress);
+	address = atoll(&virtualAddress);
 	/* Page Number =  quotient of  address / 4KB and offset = remainder*/
 	/*Below is the faster method of calculating the same*/
 

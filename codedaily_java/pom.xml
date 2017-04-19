@@ -117,38 +117,44 @@
 		</dependency>
 		<dependency>
 			<groupId>com.kony.middleware</groupId>
-			<artifactId>com.ibm.mqjms</artifactId>
-			<version>1.0.0</version>
+			<artifactId>com.ibm.mq.headers</artifactId>
+			<version>1.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.kony.middleware</groupId>
+			<artifactId>com.ibm.mq</artifactId>
+			<version>1.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.kony.middleware</groupId>
 			<artifactId>com.ibm.mq.jmqi</artifactId>
-			<version>1.0.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.kony.middleware</groupId>
-			<artifactId>com.ibm.dhbcore</artifactId>
-			<version>1.0.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.kony.middleware</groupId>
-			<artifactId>com.ibm.mq.headers</artifactId>
-			<version>1.0.0</version>
+			<version>1.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.kony.middleware</groupId>
 			<artifactId>com.ibm.mq.pcf</artifactId>
-			<version>1.0.0</version>
+			<version>1.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.kony.middleware</groupId>
 			<artifactId>com.ibm.mq.postcard</artifactId>
-			<version>1.0.0</version>
+			<version>1.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.kony.middleware</groupId>
+			<artifactId>com.ibm.mqjms</artifactId>
+			<version>1.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.kony.middleware</groupId>
+			<artifactId>jms</artifactId>
+			<version>1.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>

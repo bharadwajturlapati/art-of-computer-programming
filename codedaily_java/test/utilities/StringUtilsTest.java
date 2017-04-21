@@ -6,6 +6,6 @@ public class StringUtilsTest {
 
 	@Test
 	public void testUUIDgeneration() {
-		System.out.println(StringUtils.convertToHexString("ab0ecf10-c0e5-3c77-809d".getBytes()));
+		System.out.println(StringUtils.convertToHexString("9fee1d01-bdb9-30f3-8e5a".getBytes()));
 	}
 }

@@ -20,8 +20,8 @@ function createWindow () {
     slashes: true
   }));
 
-  // Open the DevTools.
-  // win.webContents.openDevTools()
+  // Open the DevTools. // only in debug mode
+  win.webContents.openDevTools()
 
   // Emitted when the window is closed.\
 	win.on('closed', () => {

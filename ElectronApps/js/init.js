@@ -9,8 +9,10 @@ var $ts = {
     init : function() {
 	    $ts.isServerHealthy();
 	    $registerEvents.initEvents();
-	    $view.loadSplashScreen();
+	    // Pre cache Parent Nodes in a global variable for the other operations to work
+	    $genericViews.loadIdNodesFromUI();
+	    //$view.loadSplashScreen();
 	    $controller.loadAllData();
-	    $view.dismissSplash();
+	    //$view.dismissSplash();
     }
 }

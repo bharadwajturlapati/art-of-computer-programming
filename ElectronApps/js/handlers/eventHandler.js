@@ -3,6 +3,7 @@ $registerEvents = {
 	    // $registerEvents.registerDropEvent();
 	    $dialogModel.registerDialog($staticModels.defaultDialog);
 	    $registerEvents.addButtonEvents();
+	    $registerEvents.addDivEvents();
     },
     addButtonEvents : function() {
 	    $("#upload-screenshot").on("click", function(event) {
@@ -10,6 +11,14 @@ $registerEvents = {
 	    });
 	    $("#open-electron-dialog").on("click", function(event) {
 		    $controller.openElectronDialog($model.uploadConfig);
+	    });
+	    $("#change-url").on("click", function(event) {
+	    	$livebrowserEventHandler.openInExplorer($("#live-browser-url").val());
+	    });
+    },
+    addDivEvents : function() {
+	    $("#quickaccess-flex-box").on("click", function(event) {
+		    $quickAccessEventHandler.openInExplorer(event);
 	    });
     },
     registerDropEvent : function() {

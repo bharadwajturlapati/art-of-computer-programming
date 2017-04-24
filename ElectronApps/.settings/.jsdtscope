@@ -237,5 +237,7 @@
 	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="ElectronNavigatorx/node_modules/xtend"/>
 	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="ElectronNavigatorx/node_modules/yauzl"/>
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="js"/>
+	<classpathentry kind="lib" path="node_modules"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

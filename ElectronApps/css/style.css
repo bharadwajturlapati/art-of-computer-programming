@@ -74,7 +74,9 @@
 #tab-content {
 	display:flex;
 }
-
+/*
+Tab backgroud color : #ededee
+*/
 #tab-content>img{
 	width:20px;
 	height:20px;

@@ -4,6 +4,7 @@ $registerEvents = {
 	    $dialogModel.registerDialog($staticModels.defaultDialog);
 	    $registerEvents.addButtonEvents();
 	    $registerEvents.addDivEvents();
+	    //$registerEvents.addWebViewEvents();
     },
     addButtonEvents : function() {
 	    $("#upload-screenshot").on("click", function(event) {
@@ -13,7 +14,10 @@ $registerEvents = {
 		    $controller.openElectronDialog($model.uploadConfig);
 	    });
 	    $("#change-url").on("click", function(event) {
-	    	$livebrowserEventHandler.openInExplorer($("#live-browser-url").val());
+	    	$livebrowserEventHandler.loadURL($("#live-browser-url").val());
+	    });
+	    $("#go-home").on("click", function(event) {
+	    	$livebrowserEventHandler.loadURL("https://www.google.com");
 	    });
     },
     addDivEvents : function() {
@@ -27,4 +31,7 @@ $registerEvents = {
 		    console.log("file dropped");
 	    });
     },
+    addWebViewEvents : function(){
+    	
+    }
 }

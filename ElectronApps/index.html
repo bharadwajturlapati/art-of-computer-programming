@@ -22,6 +22,7 @@
 <!-- Load Handlers -->
 <script src="js/handlers/eventHandler.js"></script>
 <script src="js/handlers/quickAccessEventHandler.js"></script>
+<script src="js/handlers/livebrowserEventHandler.js"></script>
 <!-- Load Controllers -->
 <script src="js/controllers/mainController.js"></script>
 <script src="js/controllers/quickAccessDataController.js"></script>
@@ -43,7 +44,7 @@
 			<li class="active"><a data-toggle="tab" href="#quick-access">Quick
 					Access</a></li>
 			<li><a data-toggle="tab" href="#workspace">Workspace</a></li>
-			<li><a data-toggle="tab" href="#live-browser">Live browser</a></li>
+			<li><a data-toggle="tab" href="#live-browser">Browser</a></li>
 			<li><a data-toggle="tab" href="#todo-list">Todo List</a></li>
 			<li><a data-toggle="tab" href="#api-management">API
 					Management</a></li>
@@ -81,21 +82,53 @@
 				</div>
 			</div>
 			<div id="workspace" class="tab-pane fade">
-				<h3>Worspace</h3>
+				<h3>Workspace</h3>
 				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
 					laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
 			<div id="live-browser" class="tab-pane fade">
-				<h3>Live browser</h3>
-				<input type="text" id="live-browser-url"></input>
-				<button id="change-url" type="button" class="btn btn-default">
-					<span class="glyphicon glyphicon-arrow-right"></span>
-				</button>
-				<button id="go-home" type="button" class="btn btn-default">
-					<span class="glyphicon glyphicon-home"></span>
-				</button>
-				<webview id="we-view" src="https://www.google.com"
-					style="display:inline-flex; width:75%; height:100%"></webview>
+				<div id="web-view-control-group">
+					<div class="input-group">
+						<input type="text" id="live-browser-url" class="form-control"
+							placeholder="Search" id="inputGroup" /> <span
+							class="input-group-addon"> <i
+							class="glyphicon glyphicon-search"></i>
+						</span>
+					</div>
+					<button id="change-url" type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-arrow-right"></span>
+					</button>
+					<button id="go-home" type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-home"></span>
+					</button>
+				</div>
+
+				<div id="web-container" class="container">
+					<ul class="nav nav-tabs">
+						<li class="active"><a data-toggle="tab" href="#tab1">
+								<div id="tab-content">
+									<img src="gif/page-load.gif">
+									<div id="page-title">Google</div>
+								</div>
+						</a></li>
+						<li><a data-toggle="tab" id="add-newtab" href="#new-tab">
+								<div id="tab-content">
+									<span class="glyphicon glyphicon-plus"></span>
+									<div id="page-title">New Tab</div>
+								</div>
+						</a></li>
+					</ul>
+					<div class="tab-content">
+						<div id="tab1" class="tab-pane fade in active">
+							<webview id="web-view" src="https://www.google.com"
+								style="width: 100%;height: calc(100vw - 100px);"></webview>
+						</div>
+						<div id="new-tab" class="tab-pane fade">
+							<webview id="web-view" src="about:blank"
+								style="width: 100%;height: calc(100vw - 100px);"></webview>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div id="todo-list" class="tab-pane fade">
 				<h3>Todo List</h3>

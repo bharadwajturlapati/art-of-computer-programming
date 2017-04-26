@@ -11,7 +11,8 @@ $registerEvents = {
 		    $controller.fileUploadController();
 	    });
 	    $("#open-electron-dialog").on("click", function(event) {
-		    $controller.openElectronDialog($model.uploadConfig);
+		    //$controller.openElectronDialog($model.uploadConfig);
+	    	$controller.c
 	    });
 	    $("#change-url").on("click", function(event) {
 	    	$livebrowserEventHandler.loadURL($("#live-browser-url").val());

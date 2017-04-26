@@ -1,8 +1,9 @@
 {
-  "name": "Folder Navigator",
+  "name": "ElectronNavigator",
   "version": "0.1.0",
   "main": "main.js",
   "devDependencies": {
+    "desktop-screenshot": "^0.1.1",
     "jquery": "^3.2.1"
   }
 }

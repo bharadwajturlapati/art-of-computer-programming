@@ -1,5 +1,24 @@
 package messagingqueues;
 
+//SCCSID "@(#) MQMBID sn=p800-005-160518.TRIAL su=_iI9y0xzwEearh6Qyg9d9Dg pn=MQJavaSamples/jms/JmsProducer.java"
+/*
+*   <copyright 
+*   notice="lm-source-program" 
+*   pids="5724-H72,5655-R36,5655-L82,5724-L26" 
+*   years="2008,2014" 
+*   crc="279216363" > 
+*   Licensed Materials - Property of IBM  
+*    
+*   5724-H72,5655-R36,5655-L82,5724-L26 
+*    
+*   (C) Copyright IBM Corp. 2008, 2014 All Rights Reserved.  
+*    
+*   US Government Users Restricted Rights - Use, duplication or  
+*   disclosure restricted by GSA ADP Schedule Contract with  
+*   IBM Corp.  
+*   </copyright> 
+*/
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,7 +44,7 @@ import com.ibm.msg.client.wmq.WMQConstants;
  *
  * Messaging domain: Point-to-point or Publish-Subscribe
  *
- * Provider type: IBM MQ
+ * Provider type: WebSphere MQ
  *
  * Connection mode: Client connection
  *
@@ -42,7 +61,7 @@ import com.ibm.msg.client.wmq.WMQConstants;
  *
  * JmsProducer -m QM1 -d topic://foo -h localhost -p 1414 -u tester -w testpw
  */
-public class JmsProducer {
+public class JMSProducer80 {
 
 	private static String host = "localhost";
 	private static int port = 1414;

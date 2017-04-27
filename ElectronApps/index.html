@@ -23,6 +23,7 @@
 <script src="js/handlers/eventHandler.js"></script>
 <script src="js/handlers/quickAccessEventHandler.js"></script>
 <script src="js/handlers/livebrowserEventHandler.js"></script>
+<script src="js/handlers/webViewEventHandler.js"></script>
 <!-- Load Controllers -->
 <script src="js/controllers/mainController.js"></script>
 <script src="js/controllers/quickAccessDataController.js"></script>
@@ -38,18 +39,19 @@
 <!-- End of scripts Hirarchy -->
 </head>
 <body onload="$ts.init()">
+	<!-- <div id="top-of-screen"></div>-->
 	<div class="container">
-		<h2>WorkSpace Enhancer</h2>
-		<ul class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#quick-access">Quick
+		<h2 id="workspaceenhancer-Logo">WorkSpace Enhancer</h2>
+		<ul id="main-nav-tabs" class="nav nav-tabs">
+			<li id="quick-access-li" class="active"><a data-toggle="tab" href="#quick-access">Quick
 					Access</a></li>
-			<li><a data-toggle="tab" href="#workspace">Workspace</a></li>
-			<li><a data-toggle="tab" href="#live-browser">Browser</a></li>
-			<li><a data-toggle="tab" href="#todo-list">Todo List</a></li>
-			<li><a data-toggle="tab" href="#api-management">API
+			<li id="workspace-li"><a data-toggle="tab" href="#workspace">Workspace</a></li>
+			<li id="live-browser-li"><a data-toggle="tab" href="#live-browser">Browser</a></li>
+			<li id="todo-list-li"><a data-toggle="tab" href="#todo-list">Todo List</a></li>
+			<li id="api-management-li"><a data-toggle="tab" href="#api-management">API
 					Management</a></li>
-			<li><a data-toggle="tab" href="#find-in-path">FIP</a></li>
-			<li><a data-toggle="tab" href="#open-my-tools">OWN</a></li>
+			<li id="find-in-path-li"><a data-toggle="tab" href="#find-in-path">FIP</a></li>
+			<li id="open-my-tools-li"><a data-toggle="tab" href="#open-my-tools">OWN</a></li>
 		</ul>
 
 		<div class="tab-content">

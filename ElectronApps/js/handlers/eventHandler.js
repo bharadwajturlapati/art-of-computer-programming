@@ -20,11 +20,18 @@ $registerEvents = {
 	    $("#go-home").on("click", function(event) {
 	    	$livebrowserEventHandler.loadURL("https://www.google.com");
 	    });
+	    $("#live-browser-li").on("click", function(event) {
+	    	$livebrowserEventHandler.setDisplayNone();
+	    });
     },
     addDivEvents : function() {
 	    $("#quickaccess-flex-box").on("click", function(event) {
 		    $quickAccessEventHandler.openInExplorer(event);
 	    });
+	    /* Kept in comments for any further usage
+	     * $("#top-of-screen").on("mouseover", function(event) {
+	    	$webViewEventHandler.handleFullWebView(event);
+	    });*/
     },
     registerDropEvent : function() {
 	    $("#dropable-template-box").on("drop", function(event) {

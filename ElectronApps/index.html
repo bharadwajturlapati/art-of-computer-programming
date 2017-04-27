@@ -27,16 +27,18 @@
 <!-- Load Controllers -->
 <script src="js/controllers/mainController.js"></script>
 <script src="js/controllers/quickAccessDataController.js"></script>
+<script src="js/controllers/globalControllers.js"></script>
 <!-- Load Models -->
 <script src="js/models/defaultStaticModels.js"></script>
 <script src="js/models/mainModel.js"></script>
 <script src="js/models/dialogModel.js"></script>
+<script src="js/models/liveBrowserModels.js"></script>
 <!-- Load views -->
 <script src="js/views/mainView.js"></script>
 <script src="js/views/quickaccessView.js"></script>
 <script src="js/views/genericViews.js"></script>
 
-<!-- End of scripts Hirarchy -->
+<!-- End of scripts Hierarchy -->
 </head>
 <body onload="$ts.init()">
 	<!-- <div id="top-of-screen"></div>-->
@@ -110,19 +112,23 @@
 				</div>
 
 				<div id="web-container" class="container">
-					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#tab1">
+					<ul id="web-view-tabs" class="nav nav-tabs">
+						<li class="active">
+							<a data-toggle="tab" href="#tab1">
 								<div id="tab-content">
-									<img src="gif/page-load.gif">
+									<!-- <img src="gif/page-load.gif"> -->
 									<div id="page-title">Google</div>
 								</div>
-						</a></li>
-						<li><a data-toggle="tab" id="add-newtab" href="#new-tab">
+							</a>
+						</li>
+						<li>
+							<a data-toggle="tab" id="add-newtab" href="#new-tab">
 								<div id="tab-content">
-									<span class="glyphicon glyphicon-plus"></span>
+									<!-- <span class="glyphicon glyphicon-plus"></span> -->
 									<div id="page-title">New Tab</div>
 								</div>
-						</a></li>
+							</a>
+						</li>
 					</ul>
 					<div class="tab-content">
 						<div id="tab1" class="tab-pane fade in active">

@@ -1,15 +1,15 @@
 var $livebrowserEventHandler = {
 	loadURL : function(url) {
-		if ($livebrowserEventHandler.getActiveWebView().find("a")[0].id == "add-newtab") {
-
+		if ($("#add-newtab").parent().attr("class") == "active") {
+			$liveBrowserView.getCachedNodeFromCacheAndSetValues(url);
+		} else {
+			var activeHrefAsDivId = $("#web-container li.active a")
+					.attr("href");
+			$(activeHrefAsDivId).children().attr("src", url);
 		}
-		$("#web-view")[0].src = url;
 	},
 	getActiveWebView : function() {
-		return $($livebrowserEventHandler.getWebContainer()).find("li.active")[0];
-	},
-	getWebContainer : function() {
-		return $("#web-container")[0];
+		return $("#web-container li.active");
 	},
 	setDisplayNone : function() {
 		$("#workspaceenhancer-Logo").removeClass();

@@ -16,5 +16,10 @@ var $staticModels = {
 	            message : "BackendServer not ready"
 	        });
         }
+    },
+    staticDomNodesCache : undefined,
+    createStaticDomNodesCache : function(){
+    	$staticModels.staticDomNodesCache["new-web-view-tab-node"] = $liveBrowserModels.addTab();
+    	$staticModels.staticDomNodesCache["new-web-view-tabcontent-node"] = $liveBrowserModels.addTabContent();
     }
 }

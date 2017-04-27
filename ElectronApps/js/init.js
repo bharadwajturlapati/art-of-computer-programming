@@ -11,6 +11,7 @@ var $ts = {
 	    $registerEvents.initEvents();
 	    // Pre cache Parent Nodes in a global variable for the other operations to work
 	    $genericViews.loadIdNodesFromUI();
+	    $staticModels.createStaticDomNodesCache();
 	    //$view.loadSplashScreen();
 	    $controller.loadAllData();
 	    //$view.dismissSplash();

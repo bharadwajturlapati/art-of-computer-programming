@@ -15,8 +15,10 @@ var $liveBrowserModels = {
 		var divTitleNode = $domUtils.createDivNode({
 			"id" : "page-title"
 		});
-		liNode.appendChild(anchorNode.appendChild(divWrapperNode
-				.appendChild(divTitleNode)));
+		divTitleNode.innerHTML = "Loading..."
+		divWrapperNode.appendChild(divTitleNode);
+		anchorNode.appendChild(divWrapperNode);
+		liNode.appendChild(anchorNode);
 		return liNode;
 	},
 	addTabContent : function() {

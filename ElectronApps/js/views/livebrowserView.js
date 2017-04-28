@@ -1,18 +1,16 @@
 var $liveBrowserView = {
 	getCachedNodeFromCacheAndSetValues : function(url) {
-		$livebrowserEventHandler.getActiveWebView().removeClass();
-		// remove tab fade in class
-		//get cached place holder nodes
-		var new_web_view_tab_node = $staticModels.staticDomNodesCache["new-web-view-tab-node"];
-		var new_web_view_tab_content_node = $staticModels.staticDomNodesCache["new-web-view-tabcontent-node"];
+		var new_web_view_tab_node = $staticModels.staticDomNodesCache["new-web-view-tab-node"].cloneNode(true);
+		var new_web_view_tab_content_node = $staticModels.staticDomNodesCache["new-web-view-tabcontent-node"].cloneNode(true);
 		var tabID = $globals["live-browser-view"].tabs;
 		new_web_view_tab_node.children[0].setAttribute("href", tabID);
 		new_web_view_tab_content_node.setAttribute("id", tabID);
 		new_web_view_tab_content_node.children[0].setAttribute("src", url);
-		$liveBrowserView.addTitleToTab(url, new_web_view_tab_content_node);
+		$liveBrowserView.addTitleToTab(url, new_web_view_tab_node);
 		$liveBrowserView.addTabToLastInnerChild(new_web_view_tab_node);
 		$liveBrowserView
 				.addTabContentToLastInnerChild(new_web_view_tab_content_node);
+		$generateEvents.simualteClick(new_web_view_tab_node.children[0]);
 		$globals["live-browser-view"].tabs += 1;
 	},
 	addTabToLastInnerChild : function(node) {
@@ -22,7 +20,7 @@ var $liveBrowserView = {
 		$(node).insertBefore($("#new-tab"));
 	},
 	setTitleToPage : function(title, node) {
-		node.children[0].children[0].children[0].innerHTML = "title"
+		node.children[0].children[0].children[0].innerHTML = title;
 	},
 	addTitleToTab : function(url, node) {
 		$networkUtils.ajax({

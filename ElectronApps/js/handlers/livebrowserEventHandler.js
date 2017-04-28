@@ -5,6 +5,7 @@ var $livebrowserEventHandler = {
 		} else {
 			var activeHrefAsDivId = $("#web-container li.active a")
 					.attr("href");
+			id = $livebrowserEventHandler.processID(activeHrefAsDivId);
 			$(activeHrefAsDivId).children().attr("src", url);
 		}
 	},
@@ -16,5 +17,10 @@ var $livebrowserEventHandler = {
 		$("#workspaceenhancer-Logo").addClass("hide-workspaceenhancer-Logo");
 		$("#main-nav-tabs").removeClass();
 		$("#main-nav-tabs").addClass("nav nav-tabs hide-main-nav-tabs");
+	},
+	processID: function(id) {
+		if(!id.startsWith("#")){
+			return "#"+id;
+		}
 	}
 }

@@ -1,11 +1,9 @@
 $registerEvents = {
 	initEvents : function() {
-		// $registerEvents.registerDropEvent();
 		$dialogModel.registerDialog($staticModels.defaultDialog);
 		$registerEvents.addButtonEvents();
 		$registerEvents.addDivEvents();
 		$registerEvents.addTabEvents();
-		//$registerEvents.addWebViewEvents();
 	},
 	addButtonEvents : function() {
 		$("#upload-screenshot").on("click", function(event) {
@@ -30,18 +28,11 @@ $registerEvents = {
 		$("#quickaccess-flex-box").on("click", function(event) {
 			$quickAccessEventHandler.openInExplorer(event);
 		});
-		/* Kept in comments for any further usage
-		 * $("#top-of-screen").on("mouseover", function(event) {
-			$webViewEventHandler.handleFullWebView(event);
-		});*/
 	},
 	registerDropEvent : function() {
 		$("#dropable-template-box").on("drop", function(event) {
 			event.preventDefault();
 			console.log("file dropped");
 		});
-	},
-	addWebViewEvents : function() {
-
 	}
 }

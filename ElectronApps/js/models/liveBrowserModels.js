@@ -2,9 +2,7 @@ var $liveBrowserModels = {
 	addTab : function() {
 		// cache this node in the global variable and apply the properies in the
 		// run time
-		var liNode = $domUtils.createLiNode({
-			"class" : "active"
-		});
+		var liNode = $domUtils.createLiNode(null);
 		var anchorNode = $domUtils.createAnchorNode({
 			"data-toggle" : "tab",
 			"href" : 3

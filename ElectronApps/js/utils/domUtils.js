@@ -12,6 +12,6 @@ var $domUtils = {
 		return $("<a>", config)[0];
 	},
 	createWebViewNode : function(config) {
-		return $("<web-view>", config)[0];
+		return $("<webview>", config)[0];
 	}
 }

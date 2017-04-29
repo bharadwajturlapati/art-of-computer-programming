@@ -28,11 +28,5 @@ $registerEvents = {
 		$("#quickaccess-flex-box").on("click", function(event) {
 			$quickAccessEventHandler.openInExplorer(event);
 		});
-	},
-	registerDropEvent : function() {
-		$("#dropable-template-box").on("drop", function(event) {
-			event.preventDefault();
-			console.log("file dropped");
-		});
 	}
 }

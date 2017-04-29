@@ -22,11 +22,5 @@ var $webViewEventHandler = {
 		var imageNode = tabcontentNode.getElementsByTagName("IMG")[0];
 		imageNode.width = 0;
 		imageNode.height = 0;
-	},
-	handleFullWebView : function(event) {
-		// event.pageY > 0 to restric the content coming from top 
-		if ($("#live-browser-li")[0].getAttribute("class") == "active" && event.pageY >5) {
-			console.log("comes from the bottom");
-		}
 	}
 }

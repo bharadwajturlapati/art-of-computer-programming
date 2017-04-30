@@ -125,18 +125,37 @@ Tab backgroud color : #ededee
 	transition: all 200ms ease-in;
 	transform: translate(0px, 0px);
 } */
-
 .loading-panel {
 	/*
 	aligning center logic
 	*/
 	z-index: 699;
-    color: white;
-    top: 30%;
-    margin: auto;
-    float: none;
-    vertical-align: center;
+	color: white;
+	top: 30%;
+	margin: auto;
+	float: none;
+	vertical-align: center;
 }
+
+.side-nav {
+	height: 100%;
+	opacity: 0;
+	width:10px;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background-color:white;
+	overflow-x: hidden;
+	transition-property: width,opacity;
+	transition-duration: 20ms, 0s;
+}
+
+.side-nav:hover {
+	width: 150px;
+	opacity:1;
+}
+
 @keyframes progress-bar-stripes {
   from {
     width:0%;

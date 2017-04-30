@@ -140,26 +140,49 @@ Tab backgroud color : #ededee
 .side-nav {
 	height: 100%;
 	opacity: 0;
-	width:10px;
+	width: 10px;
 	position: fixed;
 	z-index: 10;
 	top: 0;
 	left: 0;
-	background-color:white;
+	background-color: white;
 	overflow-x: hidden;
-	transition-property: width,opacity;
+	transition-property: width, opacity;
 	transition-duration: 20ms, 0s;
 }
 
 .side-nav:hover {
 	width: 150px;
-	opacity:1;
+	opacity: 1;
 }
 
-@keyframes progress-bar-stripes {
-  from {
-    width:0%;
-  }
-  to {
-    width:100%;
-  }
+.tab-pane {
+	min-height: 100vh;
+}
+
+.api-call-manager {
+	overflow: overlay;
+}
+
+.api-params {
+	float: left;
+}
+
+.api-save {
+	float: right;
+    margin-right: 10px;
+}
+
+.api-send {
+	float: right;
+    margin-right: 10px;
+}
+
+.api-http-method {
+	float: left;
+}
+
+.api-url {
+	float: left;
+	width: 60%;
+}

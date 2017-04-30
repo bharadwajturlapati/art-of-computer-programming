@@ -1,0 +1,7 @@
+@keyframes progress-bar-stripes {
+  from {
+    width:0%;
+  }
+  to {
+    width:100%;
+  }

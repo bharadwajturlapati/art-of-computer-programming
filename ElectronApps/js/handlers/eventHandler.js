@@ -4,6 +4,7 @@ $registerEvents = {
 		$registerEvents.addButtonEvents();
 		$registerEvents.addDivEvents();
 		$registerEvents.addTabEvents();
+		$registerEvents.addPanelEvents();
 	},
 	addButtonEvents : function() {
 		$("#upload-screenshot").on("click", function(event) {
@@ -27,6 +28,32 @@ $registerEvents = {
 	addDivEvents : function() {
 		$("#quickaccess-flex-box").on("click", function(event) {
 			$quickAccessEventHandler.openInExplorer(event);
+		});
+	},
+	addPanelEvents : function() {
+		/* Minimize */
+		$(".panel-tools .minimise-tool").click(function(event) {
+			$(this).parents(".panel").find(".panel-body").slideToggle(100);
+			return false;
+		});
+		/* Close */
+		$(".panel-tools .closed-tool").click(function(event) {
+			$(this).parents(".panel").fadeToggle(400);
+			return false;
+		});
+		/* Search */
+		$(".panel-tools .search-tool").click(function(event) {
+			$(this).parents(".panel").find(".panel-search").toggle(100);
+			return false;
+		});
+		/* expand */
+		$('.panel-tools .expand-tool').on('click', function() {
+			if ($(this).parents(".panel").hasClass('panel-fullsize')) {
+				$(this).parents(".panel").removeClass('panel-fullsize');
+			} else {
+				$(this).parents(".panel").addClass('panel-fullsize');
+
+			}
 		});
 	}
 }

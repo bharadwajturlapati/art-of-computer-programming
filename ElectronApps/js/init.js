@@ -14,6 +14,6 @@ var $ts = {
 	    $staticModels.createStaticDomNodesCache();
 	    //$view.loadSplashScreen();
 	    $controller.loadAllData();
-	    //$view.dismissSplash();
+	    $view.dismissSplash();
     }
 }

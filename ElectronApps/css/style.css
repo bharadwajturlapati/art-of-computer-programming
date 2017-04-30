@@ -1,4 +1,6 @@
-.flex-container {
+/*
+remove once kode is introduced
+ .flex-container {
 	position: relative;
 	top: 10px;
 	display: -webkit-flex;
@@ -76,9 +78,9 @@
 #tab-content {
 	display: flex;
 }
-/*
+
 Tab backgroud color : #ededee
-*/
+
 #tab-content>img {
 	width: 20px;
 	height: 20px;
@@ -122,4 +124,23 @@ Tab backgroud color : #ededee
 	-webkit-transform: translate(0px, 0px);
 	transition: all 200ms ease-in;
 	transform: translate(0px, 0px);
+} */
+
+.loading-panel {
+	/*
+	aligning center logic
+	*/
+	z-index: 699;
+    color: white;
+    top: 30%;
+    margin: auto;
+    float: none;
+    vertical-align: center;
 }
+@keyframes progress-bar-stripes {
+  from {
+    width:0%;
+  }
+  to {
+    width:100%;
+  }

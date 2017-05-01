@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="workspaceApp">
 <head>
 <meta charset="UTF-8">
-<title>Workspace Enhancer</title>
+<title>Workspace Fabric</title>
 <link rel="stylesheet" href="css/jquery-ui.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
@@ -16,6 +16,7 @@
 <!-- Load third Party Files First -->
 <script src="js/external/bootstrap.min.js"></script>
 <script src="js/external/jquery-ui.js"></script>
+<script src="js/external/angular.min.js"></script>
 <script src="js/external/notify.js"></script>
 
 <!-- Load  Utils-->
@@ -31,6 +32,7 @@
 <script src="js/controllers/mainController.js"></script>
 <script src="js/controllers/quickAccessDataController.js"></script>
 <script src="js/controllers/globalControllers.js"></script>
+<script src="js/controllers/angularControllers.js"></script>
 <!-- Load Models -->
 <script src="js/models/defaultStaticModels.js"></script>
 <script src="js/models/mainModel.js"></script>
@@ -41,6 +43,10 @@
 <script src="js/views/quickaccessView.js"></script>
 <script src="js/views/genericViews.js"></script>
 <script src="js/views/livebrowserView.js"></script>
+<!--  init and load angular -->
+<script>
+angular.module('workspaceApp', []);
+</script>
 <!-- End of scripts Hierarchy -->
 </head>
 <body onload="$ts.init()">
@@ -50,7 +56,7 @@
 			<div class="panel panel-transparent">
 				<div class="panel-title">A product of toString()</div>
 				<div class="panel-body">
-					<h3 style="color: #32aeff">Workspace Enhancer</h3>
+					<h3 style="color: #32aeff">Workspace Fabric</h3>
 					<div class="progress progress-striped active">
 						<div class="progress-bar" role="progressbar" aria-valuenow="60"
 							aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
@@ -81,210 +87,25 @@
 		</nav>
 		<div class="tab-content">
 			<div id="quick-access" role="tabpanel" class="tab-pane active">
-			<h3>Quick Access</h3>
-				<div class="col-md-6 col-lg-4">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<button id="upload-screenshot" type="button"
-								class="btn btn-default">
-								<span class="glyphicon glyphicon-plus"></span>
-							</button>
-						</div>
-					</div>
-				</div>
-				<div id="dialog" title="Upload Image">
-					<form>
-						<div class="form-group">
-							<label for="inputdefault">Nick Name</label> <input
-								class="form-control" id="pic-name" type="text">
-						</div>
-						<div class="form-group">
-							<label for="inputdefault">Logical Group</label> <input
-								class="form-control" id="pic-group" type="text">
-						</div>
-						<div class="form-group">
-							<label for="inputdefault">File Input URL</label> <input
-								class="form-control" id="pic-group" type="text">
-						</div>
-						<button id="open-electron-dialog" type="button"
-							class="btn btn-default">
-							<span>Upload</span>
-						</button>
-					</form>
-				</div>
+				<ng-include src="'partials/quick-access-partial.html'"></ng-include>
 			</div>
 			<div id="workspace" role="tabpanel" class="tab-pane">
-				<h3>Workspace</h3>
-				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<ng-include src="'partials/workspace-partial.html'"></ng-include>
 			</div>
 			<div id="live-browser" role="tabpanel" class="tab-pane ">
-				<div id="web-view-control-group">
-					<div class="input-group">
-						<input type="text" id="live-browser-url" class="form-control"
-							placeholder="Search" id="inputGroup" /> <span
-							class="input-group-addon"> <i
-							class="glyphicon glyphicon-search"></i>
-						</span>
-					</div>
-					<button id="change-url" type="button" class="btn btn-default">
-						<span class="glyphicon glyphicon-arrow-right"></span>
-					</button>
-					<button id="go-home" type="button" class="btn btn-default">
-						<span class="glyphicon glyphicon-home"></span>
-					</button>
-				</div>
-
-				<div id="web-container" role="tab-panel">
-					<ul id="web-view-tabs" class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#tab1">
-								<div id="tab-content">
-									<!-- <img src="gif/page-load.gif"> -->
-									<div id="page-title">Google</div>
-								</div>
-						</a></li>
-						<li><a data-toggle="tab" id="add-newtab" href="#new-tab">
-								<div id="tab-content">
-									<!-- <span class="glyphicon glyphicon-plus"></span> -->
-									<div id="page-title">New Tab</div>
-								</div>
-						</a></li>
-					</ul>
-					<div class="tab-content">
-						<div id="tab1" class="tab-pane fade in active">
-							<webview id="web-view" src="https://www.google.com"
-								style="width: 100%;height: calc(100vw - 100px);"></webview>
-						</div>
-						<div id="new-tab" class="tab-pane fade">
-							<webview id="web-view" src="about:blank"
-								style="width: 100%;height: calc(100vw - 100px);"></webview>
-						</div>
-					</div>
-				</div>
+				<ng-include src="'partials/live-browser-partial.html'"></ng-include>
 			</div>
 			<div id="todo-list" role="tabpanel" class="tab-pane">
-				<h3>Todo List</h3>
-				<!-- Start Panel -->
-				<div class="col-md-6 col-lg-4">
-					<div class="panel panel-default">
-						<div class="panel-title">
-							With Tools
-							<ul class="panel-tools">
-								<li><a class="icon minimise-tool"><i
-										class="fa fa-minus"></i></a></li>
-								<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-								<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-							</ul>
-						</div>
-						<div class="panel-body">We choose to go to the moon in this
-						</div>
-
-					</div>
-				</div>
-				<!-- End Panel -->
+				<ng-include src="'partials/todo-partial.html'"></ng-include>
 			</div>
 			<div id="api-management" role="tabpanel" class="tab-pane">
-				<h3>API Management</h3>
-				<div role="tabpanel">
-					<ul class="nav nav-tabs">
-						<li role="presentation" class="active"><a
-							href="#new-api-call-tab" aria-controls="new-api-call-tab"
-							role="tab" data-toggle="tab">New Tab</a></li>
-						<li role="presentation"><a href="#add-new-api-tab"
-							aria-controls="home" role="tab" data-toggle="tab"><span
-								class="glyphicon glyphicon-plus"></span></a></li>
-					</ul>
-					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane active" id="new-api-call-tab">
-							<div class="api-call-manager">
-								<div class="dropdown api-http-method">
-									<button class="btn dropdown-toggle" type="button"
-										id="dropdownMenu1" data-toggle="dropdown"
-										aria-expanded="false">
-										GET <span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu" role="menu"
-										aria-labelledby="dropdownMenu1">
-										<li role="presentation"><a role="menuitem" tabindex="-1"
-											href="#">GET</a></li>
-										<li role="presentation"><a role="menuitem" tabindex="-1"
-											href="#">POST</a></li>
-										<li role="presentation"><a role="menuitem" tabindex="-1"
-											href="#">PUT</a></li>
-										<li role="presentation"><a role="menuitem" tabindex="-1"
-											href="#">DELETE</a></li>
-										<li role="presentation"><a role="menuitem" tabindex="-1"
-											href="#">PATCH</a></li>
-									</ul>
-								</div>
-								<input type="text" class="form-control api-url" />
-
-								<button type="button" class="btn api-params">Params</button>
-								<div class="btn-group api-send">
-									<button type="button" class="btn">Send</button>
-									<button type="button" class="btn dropdown-toggle"
-										data-toggle="dropdown" aria-expanded="false">
-										<span class="caret"></span> <span class="sr-only">Toggle
-											Dropdown</span>
-									</button>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="#">Send and Download</a></li>
-									</ul>
-								</div>
-								<div class="btn-group api-save">
-									<button type="button" class="btn">Save</button>
-									<button type="button" class="btn dropdown-toggle"
-										data-toggle="dropdown" aria-expanded="false">
-										<span class="caret"></span> <span class="sr-only">Toggle
-											Dropdown</span>
-									</button>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="#">Save as</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="api-configuration">
-								<div role="tabpanel">
-									<!-- Nav tabs -->
-									<ul class="nav nav-tabs nav-line" role="tablist">
-										<li role="presentation" class=""><a
-											href="#api-authorization" aria-controls="home5" role="tab"
-											data-toggle="tab" aria-expanded="false">Authorization</a></li>
-										<li role="presentation" class="active"><a
-											href="#api-headers" aria-controls="profile5" role="tab"
-											data-toggle="tab" class="active" aria-expanded="true">Headers</a></li>
-										<li role="presentation"><a href="#api-body"
-											aria-controls="messages5" role="tab" data-toggle="tab">Body</a></li>
-									</ul>
-
-									<!-- Tab panes -->
-									<div class="tab-content">
-										<div role="tabpanel" class="tab-pane" id="api-authorization">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-												elit</p>
-										</div>
-										<div role="tabpanel" class="tab-pane active" id="api-headers">
-											<p>Ut in leo ut libero sodales feugiat</p>
-										</div>
-										<div role="tabpanel" class="tab-pane" id="api-body">
-											<p>Duis ac enim diam</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="response"></div>
-						</div>
-					</div>
-				</div>
+				<ng-include src="'partials/api-management-partial.html'"></ng-include>
 			</div>
 			<div id="find-in-path" role="tabpanel" class="tab-pane">
-				<h3>Find in path</h3>
-				<p>Helps You to get where your environmental variables are
-					located</p>
+				<ng-include src="'partials/find-in-path-partial.html'"></ng-include>
 			</div>
 			<div id="open-my-tools" role="tabpanel" class="tab-pane">
-				<h3>OWN</h3>
-				<p>Helps You to open your tools on the fly with a single click</p>
+				<ng-include src="'partials/own-partial.html'"></ng-include>
 			</div>
 		</div>
 	</div>

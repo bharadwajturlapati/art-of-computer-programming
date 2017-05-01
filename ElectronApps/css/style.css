@@ -161,7 +161,8 @@ Tab backgroud color : #ededee
 }
 
 .api-call-manager {
-	overflow: overlay;
+	height: inherit;
+    min-height: 50px;
 }
 
 .api-params {

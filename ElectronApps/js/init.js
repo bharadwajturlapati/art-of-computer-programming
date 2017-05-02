@@ -13,9 +13,11 @@ var $ts = {
 		// to work
 		$genericViews.loadIdNodesFromUI();
 		$staticModels.createStaticDomNodesCache();
-		$registerAngularControllers.registerFIPController();
 		// $view.loadSplashScreen();
 		$controller.loadAllData();
 		$view.dismissSplash();
+	},
+	registerAngularAll : function() {
+		$registerAngularControllers.registerFIPController();
 	}
 }

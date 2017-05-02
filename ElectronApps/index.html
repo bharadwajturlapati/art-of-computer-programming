@@ -33,6 +33,7 @@
 <script src="js/controllers/quickAccessDataController.js"></script>
 <script src="js/controllers/globalControllers.js"></script>
 <script src="js/controllers/angularControllers.js"></script>
+<script src="js/controllers/fipDataController.js"></script>
 <!-- Load Models -->
 <script src="js/models/defaultStaticModels.js"></script>
 <script src="js/models/mainModel.js"></script>
@@ -46,6 +47,7 @@
 <!--  init and load angular -->
 <script>
 	var $angular = angular.module('workspaceApp', []);
+	$ts.registerAngularAll();
 </script>
 <!-- End of scripts Hierarchy -->
 </head>
@@ -292,10 +294,10 @@
 							<td class="text-center"><i class="fa fa-trash"></i></td>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<td># <b>9652</b></td>
-							<td>Kode Gaming Laptop</td>
+					<tbody ng-controller="fipController">
+						<tr ng-repeat="eachObj in systempaths track by $index">
+							<td># <b>{{eachObj.id}}</b></td>
+							<td>{{eachObj.path}}</td>
 							<td class="text-center"><div class="checkbox margin-t-0">
 									<input id="checkbox1" type="checkbox"><label
 										for="checkbox1"></label>

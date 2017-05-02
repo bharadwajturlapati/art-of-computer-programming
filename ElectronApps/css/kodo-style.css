@@ -140,7 +140,7 @@ body {
 	color: #58666e;
 	margin: 0;
 	line-height: 1.7em;
-	font-size: 13px;
+	font-weight: 400;
 	font-family: 'Open Sans', sans-serif;
 	outline: 0;
 	text-Shadow: 0 0 1px rgba(0, 0, 0, 0.2);
@@ -3386,7 +3386,7 @@ div[data-role="editor-toolbar"] {
 .panel-title {
 	font-family: 'Montserrat', sans-serif;
 	color: #58666e;
-	font-size: 13px;
+	font-weight: 400;
 	font-weight: bold;
 	text-transform: uppercase;
 	padding: 16px 20px;

@@ -69,30 +69,48 @@
 			</div>
 		</div>
 	</div>
-	<div role="tab-panel">
-		<nav class="side-nav">
+	<div role="tab-panel" class="dark-theme">
+		<nav class="side-nav dark-theme">
+			<div id="user-gravatar" class="">
+				<ul class="top-right">
+					<li class="dropdown link"><a href="#" class="profilebox"
+						aria-expanded="false"><img src="imgs/user-gravatar.png"
+							alt="img"><b>Jona Doe</b></a></li>
+				</ul>
+			</div>
 			<ul id="main-nav-tabs" class="nav nav-tabs nav-stacked">
 				<li id="quick-access-li" class="active"><a data-toggle="tab"
-					href="#quick-access">Quick Access</a></li>
-				<li id="workspace-li"><a data-toggle="tab" href="#workspace">Workspace</a></li>
+					href="#quick-access"> <span class="icon color6"><img
+							src="imgs/quick-access-50.png" alt="img">Quick Access </a></li>
+				<li id="workspace-li"><a data-toggle="tab" href="#workspace">
+						<span class="icon color6"></span>Workspace
+				</a></li>
 				<li id="live-browser-li"><a data-toggle="tab"
-					href="#live-browser">Browser</a></li>
-				<li id="todo-list-li"><a data-toggle="tab" href="#todo-list">Todo
-						List</a></li>
+					href="#live-browser"> <span class="icon color6"><<img
+							src="imgs/live-browser.png" alt="img"></span>Browser
+				</a></li>
+				<li id="todo-list-li"><a data-toggle="tab" href="#todo-list">
+						<span class="icon color6"><img src="imgs/todo-50.png" alt="img"></span>Todo
+						List
+				</a></li>
 				<li id="api-management-li"><a data-toggle="tab"
-					href="#api-management">API Management</a></li>
+					href="#api-management"><span class="icon color6"><img
+							src="imgs/api-mang-50.png" alt="img"></span>API Management</a></li>
 				<li id="find-in-path-li"><a data-toggle="tab"
-					href="#find-in-path">Find In Path</a></li>
+					href="#find-in-path"><span class="icon color6"><img
+							src="imgs/fip-50.png" alt="img"></i></span>Find In Path</a></li>
 				<li id="open-my-tools-li"><a data-toggle="tab"
-					href="#open-my-tools">OWN</a></li>
+					href="#open-my-tools"><span class="icon color6"><img
+							src="imgs/.png" alt="img"></span>OWN</a></li>
 			</ul>
 		</nav>
-		<div class="tab-content">
-			<div id="quick-access" role="tabpanel" class="tab-pane active">
+		<div class="tab-content dark-theme">
+			<div id="quick-access" role="tabpanel"
+				class="tab-pane active dark-theme">
 				<h3>Quick Access</h3>
 				<div class="col-md-6 col-lg-4">
-					<div class="panel panel-default">
-						<div class="panel-body">
+					<div class="panel panel-default dark-theme">
+						<div class="panel-body dark-theme">
 							<button id="upload-screenshot" type="button"
 								class="btn btn-default">
 								<span class="glyphicon glyphicon-plus"></span>
@@ -121,24 +139,26 @@
 					</form>
 				</div>
 			</div>
-			<div id="workspace" role="tabpanel" class="tab-pane">
+			<div id="workspace" role="tabpanel" class="tab-pane dark-theme">
 				<h3>Workspace</h3>
 				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
 					laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
-			<div id="live-browser" role="tabpanel" class="tab-pane ">
-				<div id="web-view-control-group">
-					<div class="input-group">
+			<div id="live-browser" role="tabpanel" class="tab-pane dark-theme ">
+				<div id="web-view-control-group" class="set-min-height-50-px">
+					<div class="input-group align-left set-max-width-75-per">
 						<input type="text" id="live-browser-url" class="form-control"
 							placeholder="Search" id="inputGroup" /> <span
 							class="input-group-addon"> <i
 							class="glyphicon glyphicon-search"></i>
 						</span>
 					</div>
-					<button id="change-url" type="button" class="btn btn-default">
+					<button id="change-url" type="button"
+						class="btn btn-default align-left">
 						<span class="glyphicon glyphicon-arrow-right"></span>
 					</button>
-					<button id="go-home" type="button" class="btn btn-default">
+					<button id="go-home" type="button"
+						class="btn btn-default align-left">
 						<span class="glyphicon glyphicon-home"></span>
 					</button>
 				</div>
@@ -170,7 +190,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="todo-list" role="tabpanel" class="tab-pane">
+			<div id="todo-list" role="tabpanel" class="tab-pane dark-theme">
 				<h3>Todo List</h3>
 				<!-- Start Panel -->
 				<div class="col-md-6 col-lg-4">
@@ -190,7 +210,7 @@
 				</div>
 				<!-- End Panel -->
 			</div>
-			<div id="api-management" role="tabpanel" class="tab-pane">
+			<div id="api-management" role="tabpanel" class="tab-pane dark-theme">
 				<h3>API Management</h3>
 				<div role="tabpanel">
 					<ul class="nav nav-tabs">
@@ -284,27 +304,58 @@
 					</div>
 				</div>
 			</div>
-			<div id="find-in-path" role="tabpanel" class="tab-pane">
+			<div id="find-in-path" role="tabpanel" class="tab-pane dark-theme">
 				<h3>Find in path</h3>
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<td>Serial ID</td>
-							<td>Path Variable</td>
-							<td class="text-center"><i class="fa fa-trash"></i></td>
-						</tr>
-					</thead>
-					<tbody ng-controller="fipController">
-						<tr ng-repeat="eachObj in systempaths track by $index">
-							<td># <b>{{eachObj.id}}</b></td>
-							<td>{{eachObj.path}}</td>
-							<td class="text-center"><div class="checkbox margin-t-0">
-									<input id="checkbox1" type="checkbox"><label
-										for="checkbox1"></label>
-								</div></td>
-						</tr>
-					</tbody>
-				</table>
+				<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<div class="panel panel-default">
+							<div class="panel-title">
+								System and User Paths
+								<ul class="panel-tools">
+									<li><a class="icon search-tool"><i
+											class="fa fa-search"></i></a></li>
+									<li><a class="icon minimise-tool"><i
+											class="fa fa-minus"></i></a></li>
+									<li><a class="icon expand-tool"><i
+											class="fa fa-expand"></i></a></li>
+									<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+								</ul>
+							</div>
+							<div class="panel-search" style="display: none;">
+								<input type="text" ng-model="searchText" placeholder="Search">
+								<i class="fa fa-search icon"></i>
+							</div>
+							<div class="panel-body">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<td>Serial ID</td>
+											<td>Path Variable</td>
+											<td class="text-center"><i class="fa fa-trash"></i></td>
+										</tr>
+									</thead>
+									<tbody ng-controller="fipController">
+										<tr ng-repeat="eachObj in systempaths track by $index">
+											<td># <b>{{eachObj.id}}</b></td>
+											<td>{{eachObj.path}}</td>
+											<td class="text-center"><div class="checkbox margin-t-0">
+													<input id="checkbox1" type="checkbox"><label
+														for="checkbox1"></label>
+												</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="panel panel-default">
+							<div class="panel-title">Find variable</div>
+							<div class="panel-body"></div>
+
+						</div>
+					</div>
+				</div>
 			</div>
 			<div id="open-my-tools" role="tabpanel" class="tab-pane">
 				<h3>OWN</h3>

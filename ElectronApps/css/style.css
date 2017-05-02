@@ -152,7 +152,7 @@ Tab backgroud color : #ededee
 }
 
 .side-nav:hover {
-	width: 150px;
+	width: 250px;
 	opacity: 1;
 }
 
@@ -162,7 +162,7 @@ Tab backgroud color : #ededee
 
 .api-call-manager {
 	height: inherit;
-    min-height: 50px;
+	min-height: 50px;
 }
 
 .api-params {
@@ -171,12 +171,12 @@ Tab backgroud color : #ededee
 
 .api-save {
 	float: right;
-    margin-right: 10px;
+	margin-right: 10px;
 }
 
 .api-send {
 	float: right;
-    margin-right: 10px;
+	margin-right: 10px;
 }
 
 .api-http-method {
@@ -186,4 +186,38 @@ Tab backgroud color : #ededee
 .api-url {
 	float: left;
 	width: 60%;
+}
+
+.dark-theme {
+	background-color: #3d464d;
+	color: #3d464d;
+}
+
+.dark-theme>h3 {
+	color: #ececec;
+}
+
+.dark-theme.tab-content {
+	background: #3d464d;
+	color: #3d464d;
+}
+
+.dark-theme>#page-title {
+	color: #3d464d;
+}
+
+.align-left {
+	float: left;
+}
+
+.align-right {
+	float: right;
+}
+
+.set-max-width-75-per {
+	max-width: 75%;
+}
+
+.set-min-height-50-px {
+	min-height: 50px;
 }

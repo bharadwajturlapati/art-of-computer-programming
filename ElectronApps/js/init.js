@@ -9,10 +9,12 @@ var $ts = {
 	init : function() {
 		$ts.isServerHealthy();
 		$registerEvents.initEvents();
-		// Pre cache Parent Nodes in a global variable for the other operations to work
+		// Pre cache Parent Nodes in a global variable for the other operations
+		// to work
 		$genericViews.loadIdNodesFromUI();
 		$staticModels.createStaticDomNodesCache();
-		//$view.loadSplashScreen();
+		$registerAngularControllers.registerFIPController();
+		// $view.loadSplashScreen();
 		$controller.loadAllData();
 		$view.dismissSplash();
 	}

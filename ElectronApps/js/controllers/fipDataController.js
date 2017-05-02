@@ -1,0 +1,5 @@
+var fipDC = {
+	loadData : function() {
+
+	}
+}

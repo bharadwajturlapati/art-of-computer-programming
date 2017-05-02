@@ -10,5 +10,6 @@ var $controller = {
     },
     loadAllData : function(config) {
 	    $quickAccessDC.loadData();
+	    $fip.loadData();
     }
 }

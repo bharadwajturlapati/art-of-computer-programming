@@ -23,7 +23,7 @@
 	transition-property: width, opacity;
 	transition-duration: 20ms, 0s;
 	overflow-x: hidden;
-    overflow-y: hidden;
+	overflow-y: hidden;
 }
 
 .side-nav:hover {
@@ -64,8 +64,7 @@
 }
 
 .dark-theme {
-	background-color: #3d464d;
-	color: #3d464d;
+	background-color: #212121;
 }
 
 .dark-theme>h3 {
@@ -73,12 +72,21 @@
 }
 
 .dark-theme.tab-content {
-	background: #3d464d;
-	color: #3d464d;
+	background: #212121;
 }
 
 .dark-theme>#page-title {
-	color: #3d464d;
+	
+}
+
+.dark-theme>nav>ul>li>a>span>img {
+	height: 40px;
+	width: 40px;
+	margin-right: 10px;
+}
+
+.dark-theme>nav {
+	background: #e9e9e9;
 }
 
 .align-left {
@@ -95,4 +103,11 @@
 
 .set-min-height-50-px {
 	min-height: 50px;
+}
+.user-gravatar{
+	min-height: 100px;
+	border-bottom: 2px black solid;
+}
+.side-nav>ul>li{
+	min-width: 250px;
 }

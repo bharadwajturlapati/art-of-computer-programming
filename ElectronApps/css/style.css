@@ -1,3 +1,11 @@
+html{
+	width:100%;
+	height:100%;
+}
+body{
+	width:100%;
+	height:100%;
+}
 .loading-panel {
 	/*
 	aligning center logic
@@ -32,7 +40,8 @@
 }
 
 .tab-pane {
-	min-height: 100vh;
+	width:100%;
+	height:100%;
 }
 
 .api-call-manager {
@@ -104,15 +113,58 @@
 .set-min-height-50-px {
 	min-height: 50px;
 }
-.user-gravatar{
+
+.user-gravatar {
 	min-height: 100px;
 	border-bottom: 2px black solid;
 }
-.side-nav>ul>li{
+
+.side-nav>ul>li {
 	min-width: 250px;
 }
 
-.dark-panel{
-	background:#424242;
-	color:#eeeeee;
+.dark-panel {
+	background: #424242;
+	color: #eeeeee;
+}
+
+.response-header {
+	line-height: 3;
+	border: 1px solid black;
+	padding-left:10px;
+}
+
+.response {
+	min-height: 250px;
+	width:100%;
+	border: 1px solid black;
+}
+.api-config-tabs{
+	height: 200px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 16px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scroller-button{
+	width: 0;
+    height: 0;
+    display: none;
+}
+
+body::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.tab-content{
+	
 }

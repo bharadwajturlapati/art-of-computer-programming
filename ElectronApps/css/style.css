@@ -111,3 +111,8 @@
 .side-nav>ul>li{
 	min-width: 250px;
 }
+
+.dark-panel{
+	background:#424242;
+	color:#eeeeee;
+}

@@ -2,6 +2,7 @@
  * Author : Bharadwaj Turlapati
  */
 const {app, BrowserWindow} = require('electron');
+const electron = require('electron')
 const path = require('path');
 const url = require('url');
 
@@ -11,7 +12,8 @@ let win;
 
 function createWindow () {
 	// Create the browser window.
-	win = new BrowserWindow({width: 800, height: 600});
+	const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
+	win = new BrowserWindow({width: width, height:height});
   
 	// and load the index.html of the app.
 	win.loadURL(url.format({

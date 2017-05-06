@@ -254,48 +254,24 @@ b, strong {
 Top
 ================================================================================= */
 #top {
-	height: 60px;
+	height: 45px;
 	background: #399bff;
 	color: #fff;
 	width: 100%;
-	position: fixed;
-	z-index: 900;
+	z-index: 2;
 	top: 0;
 }
-/* =================================================================================
-App Logo
-================================================================================= */
-.applogo {
-	width: 250px;
-	height: 60px;
-	background: rgba(0, 0, 0, 0.14);
-	color: #fff;
-	position: relative;
-	padding: 19px 0 0 0px;
-	float: left;
-	text-align: center;
-}
 
-.applogo .logo {
-	color: #fff;
-	font-size: 30px;
-	font-weight: bold;
-	font-family: 'Montserrat', sans-serif;
-}
 /* =================================================================================
 Sidebar Open Button - Show or Hide Sidebar
 ================================================================================= */
 .sidebar-open-button {
 	height: 60px;
-	font-size: 22px;
-	display: block;
+	font-size: 20px;
 	width: 62px;
 	text-align: center;
-	float: left;
 	color: rgba(0, 0, 0, 0.6);
-	padding-top: 19px;
-	border-right: 1px solid rgba(0, 0, 0, 0.14);
-	z-index: 1;
+	float:left;
 }
 
 .sidebar-open-button:hover, .sidebar-open-button:active {
@@ -3446,6 +3422,14 @@ div[data-role="editor-toolbar"] {
 	position: relative;
 }
 
+.panel-dark {
+	box-shadow: none;
+	border: 1px solid #e5e5e5;
+	background: #3d464d;
+	padding: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
 .panel-footer {
 	margin: -20px;
 	margin-top: 20px;

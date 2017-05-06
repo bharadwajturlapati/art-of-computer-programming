@@ -69,15 +69,24 @@
 			</div>
 		</div>
 	</div>
+	<div id="top" class="clearfix">
+
+		<!-- Start App Logo -->
+		<div class="header-logo">
+			<a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
+			<a href="index.html" class="main-logo">Workspace Fabric</a>
+		</div>
+		<div id="user-gravatar" class="user-gravatar">
+			<ul class="top-right">
+				<li class="dropdown link"><a href="#" class="profilebox"
+					aria-expanded="false"><img src="imgs/user-gravatar.png"
+						alt="img"><b>Jona Doe</b></a></li>
+			</ul>
+		</div>
+		<!-- End of app logo -->
+	</div>
 	<div role="tab-panel" class="dark-theme">
 		<nav class="side-nav dark-theme">
-			<div id="user-gravatar" class="user-gravatar">
-				<ul class="top-left">
-					<li class="dropdown link"><a href="#" class="profilebox"
-						aria-expanded="false"><img src="imgs/user-gravatar.png"
-							alt="img"><b>Jona Doe</b></a></li>
-				</ul>
-			</div>
 			<ul id="main-nav-tabs" class="nav nav-tabs nav-stacked">
 				<li id="quick-access-li" class="active"><a data-toggle="tab"
 					href="#quick-access"> <span class="icon"><img
@@ -87,8 +96,8 @@
 							src="imgs/live-browser.png" alt="img"></span>Browser
 				</a></li>
 				<li id="todo-list-li"><a data-toggle="tab" href="#todo-list">
-						<span class="icon color6"><img src="imgs/todo-50.png" alt="img"></span>Todo
-						List
+						<span class="icon color6"><img src="imgs/todo-50.png"
+							alt="img"></span>Todo List
 				</a></li>
 				<li id="api-management-li"><a data-toggle="tab"
 					href="#api-management"><span class="icon"><img
@@ -106,10 +115,10 @@
 				class="tab-pane active dark-theme">
 				<!-- <h3>Quick Access</h3> -->
 				<div class="col-md-6 col-lg-4 col-xs-6">
-					<div class="panel panel-default dark-theme">
+					<div class="panel-dark panel-default">
 						<div class="panel-body dark-theme">
 							<button id="upload-screenshot" type="button"
-								class="btn btn-default">
+								class="btn btn-white">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</div>
@@ -186,7 +195,7 @@
 				<!-- <h3>Todo List</h3> -->
 				<!-- Start Panel -->
 				<div class="">
-					<div class="panel panel-default">
+					<div class="panel-dark panel-default">
 						<div class="panel-title">
 							With Tools
 							<ul class="panel-tools">
@@ -215,84 +224,84 @@
 					</ul>
 					<div class="tab-content">
 						<!-- <div role="tabpanel" class="tab-pane active" id="new-api-call-tab"> -->
-							<div class="api-call-manager">
-								<div class="dropdown api-http-method">
-									<button class="btn dropdown-toggle" type="button"
-										id="dropdownMenu1" data-toggle="dropdown"
-										aria-expanded="false">
-										GET <span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu" role="menu"
-										aria-labelledby="dropdownMenu1">
-										<li role="presentation"><a role="menuitem" tabindex="-1"
-											href="#">GET</a></li>
-										<li role="presentation"><a role="menuitem" tabindex="-1"
-											href="#">POST</a></li>
-										<li role="presentation"><a role="menuitem" tabindex="-1"
-											href="#">PUT</a></li>
-										<li role="presentation"><a role="menuitem" tabindex="-1"
-											href="#">DELETE</a></li>
-										<li role="presentation"><a role="menuitem" tabindex="-1"
-											href="#">PATCH</a></li>
-									</ul>
-								</div>
-								<input type="text" class="form-control api-url" />
-
-								<button type="button" class="btn api-params">Params</button>
-								<div class="btn-group api-save">
-									<button type="button" class="btn">Save</button>
-									<button type="button" class="btn dropdown-toggle"
-										data-toggle="dropdown" aria-expanded="false">
-										<span class="caret"></span> <span class="sr-only">Toggle
-											Dropdown</span>
-									</button>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="#">Save as</a></li>
-									</ul>
-								</div>
-								<div class="btn-group api-send">
-									<button type="button" class="btn">Send</button>
-									<button type="button" class="btn dropdown-toggle"
-										data-toggle="dropdown" aria-expanded="false">
-										<span class="caret"></span> <span class="sr-only">Toggle
-											Dropdown</span>
-									</button>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="#">Send and Download</a></li>
-									</ul>
-								</div>
+						<div class="api-call-manager">
+							<div class="dropdown api-http-method">
+								<button class="btn dropdown-toggle" type="button"
+									id="dropdownMenu1" data-toggle="dropdown" aria-expanded="false">
+									GET <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu"
+									aria-labelledby="dropdownMenu1">
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">GET</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">POST</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">PUT</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">DELETE</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1"
+										href="#">PATCH</a></li>
+								</ul>
 							</div>
-							<div class="api-configuration">
-								<div role="tabpanel">
-									<!-- Nav tabs -->
-									<ul class="nav nav-tabs nav-line" role="tablist">
-										<li role="presentation" class=""><a
-											href="#api-authorization" aria-controls="home5" role="tab"
-											data-toggle="tab" aria-expanded="false">Authorization</a></li>
-										<li role="presentation" class="active"><a
-											href="#api-headers" aria-controls="profile5" role="tab"
-											data-toggle="tab" class="active" aria-expanded="true">Headers</a></li>
-										<li role="presentation"><a href="#api-body"
-											aria-controls="messages5" role="tab" data-toggle="tab">Body</a></li>
-									</ul>
+							<input type="text" class="form-control api-url" />
 
-									<!-- Tab panes -->
-									<div class="tab-content api-config-tabs">
-										<div role="tabpanel" class="tab-pane" id="api-authorization">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing
-												elit</p>
-										</div>
-										<div role="tabpanel" class="tab-pane active" id="api-headers">
-											<p>Ut in leo ut libero sodales feugiat</p>
-										</div>
-										<div role="tabpanel" class="tab-pane" id="api-body">
-											<p>Duis ac enim diam</p>
-										</div>
+							<button type="button" class="btn api-params">Params</button>
+							<div class="btn-group api-save">
+								<button type="button" class="btn">Save</button>
+								<button type="button" class="btn dropdown-toggle"
+									data-toggle="dropdown" aria-expanded="false">
+									<span class="caret"></span> <span class="sr-only">Toggle
+										Dropdown</span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">Save as</a></li>
+								</ul>
+							</div>
+							<div class="btn-group api-send">
+								<button type="button" class="btn">Send</button>
+								<button type="button" class="btn dropdown-toggle"
+									data-toggle="dropdown" aria-expanded="false">
+									<span class="caret"></span> <span class="sr-only">Toggle
+										Dropdown</span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">Send and Download</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="api-configuration">
+							<div role="tabpanel">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs nav-line" role="tablist">
+									<li role="presentation" class=""><a
+										href="#api-authorization" aria-controls="home5" role="tab"
+										data-toggle="tab" aria-expanded="false">Authorization</a></li>
+									<li role="presentation" class="active"><a
+										href="#api-headers" aria-controls="profile5" role="tab"
+										data-toggle="tab" class="active" aria-expanded="true">Headers</a></li>
+									<li role="presentation"><a href="#api-body"
+										aria-controls="messages5" role="tab" data-toggle="tab">Body</a></li>
+								</ul>
+
+								<!-- Tab panes -->
+								<div class="tab-content api-config-tabs">
+									<div role="tabpanel" class="tab-pane" id="api-authorization">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+									</div>
+									<div role="tabpanel" class="tab-pane active" id="api-headers">
+										<p>Ut in leo ut libero sodales feugiat</p>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="api-body">
+										<p>Duis ac enim diam</p>
 									</div>
 								</div>
 							</div>
-							<div class="response-header"><span>Response</span></div>
-							<div id="api-response" class="response"></div>
+						</div>
+						<div class="response-header">
+							<span>Response</span>
+						</div>
+						<div id="api-response" class="response"></div>
 						<!-- </div> -->
 					</div>
 				</div>
@@ -301,7 +310,7 @@
 				<!-- <h3>Find in path</h3> -->
 				<div class="row">
 					<div class="">
-						<div class="panel panel-default dark-panel">
+						<div class="panel-dark panel-default">
 							<div class="panel-title">
 								System and User Paths
 								<ul class="panel-tools">
@@ -342,7 +351,7 @@
 						</div>
 					</div>
 					<div class="">
-						<div class="panel panel-default dark-panel">
+						<div class="panel-dark panel-default">
 							<div class="panel-title">Find variable</div>
 							<div class="panel-body"></div>
 

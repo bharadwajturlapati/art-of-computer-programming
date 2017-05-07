@@ -19,6 +19,9 @@ $registerEvents = {
 		$("#go-home").on("click", function(event) {
 			$livebrowserEventHandler.loadURL("https://www.google.com");
 		});
+		$("#api-send-button").on("click", function(event) {
+			$apiEventHandler.send("https://www.google.com");
+		});
 	},
 	addTabEvents : function() {
 		$("#live-browser-li").on("click", function(event) {

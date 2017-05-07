@@ -1,0 +1,5 @@
+var $apiEventHandler = {
+		send : function(){
+			
+		}
+}

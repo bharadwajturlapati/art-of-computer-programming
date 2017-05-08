@@ -11,6 +11,7 @@
 <script src="js/init.js"></script>
 <script>
 	$ts.preinit();
+	$ts.registerGlobalNameSpace();
 </script>
 <!--  Starts Scripts Hierarchy -->
 <!-- Load third Party Files First -->
@@ -45,6 +46,8 @@
 <script src="js/views/quickaccessView.js"></script>
 <script src="js/views/genericViews.js"></script>
 <script src="js/views/livebrowserView.js"></script>
+<!-- Load Library Files -->
+<script src="js/lib/quickaccessUI.js"></script>
 <!--  init and load angular -->
 <script>
 	var $angular = angular.module('workspaceApp', []);

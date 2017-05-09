@@ -11,7 +11,7 @@
 <script src="js/init.js"></script>
 <script>
 	$ts.preinit();
-	$ts.registerGlobalNameSpace();
+    $ts.registerGlobalNameSpace();
 </script>
 <!--  Starts Scripts Hierarchy -->
 <!-- Load third Party Files First -->
@@ -51,7 +51,7 @@
 <!--  init and load angular -->
 <script>
 	var $angular = angular.module('workspaceApp', []);
-	$ts.registerAngularAll();
+    $ts.registerAngularAll();
 </script>
 <!-- End of scripts Hierarchy -->
 </head>
@@ -83,14 +83,13 @@
 		<div id="user-gravatar" class="user-gravatar">
 			<ul class="top-right">
 				<li class="dropdown link"><a href="#" class="profilebox"
-					aria-expanded="false"><img src="imgs/user-gravatar.png"
-						alt="img"><b>Jona Doe</b></a></li>
+					aria-expanded="false"><b>Jona Doe</b></a></li>
 			</ul>
 		</div>
 		<!-- End of app logo -->
 	</div>
 	<div role="tab-panel" class="dark-theme">
-		<nav class="side-nav dark-theme">
+		<nav id="side-nav" class="side-nav dark-theme">
 			<ul id="main-nav-tabs" class="nav nav-tabs nav-stacked">
 				<li id="quick-access-li" class="active"><a data-toggle="tab"
 					href="#quick-access"> <span class="icon"><img

@@ -22,6 +22,10 @@ $registerEvents = {
 		$("#api-send-button").on("click", function(event) {
 			$apiEventHandler.send("https://www.google.com");
 		});
+		
+		$(".sidebar-open-button").on("click", function(event){
+			$("#side-nav").animate({width: "250px", opacity: "1"});
+		});
 	},
 	addTabEvents : function() {
 		$("#live-browser-li").on("click", function(event) {

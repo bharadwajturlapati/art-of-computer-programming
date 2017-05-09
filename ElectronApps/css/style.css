@@ -162,11 +162,9 @@ body::-webkit-scrollbar-thumb {
 
 .header-logo{
 	width: 250px;
-    height: 60px;
+    height: 25px;
     background: rgba(0, 0, 0, 0.14);
     color: #fff;
-    position: relative;
-    padding: 10px 0 0 0px;
     float: left;
     text-align: center;
 }

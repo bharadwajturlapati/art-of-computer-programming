@@ -175,3 +175,9 @@ body::-webkit-scrollbar-thumb {
 	color:#fff;
 	float:left;
 }
+
+.btn-center {
+	position: relative;
+    vertical-align: middle;
+    left: 35%;
+}

@@ -5,6 +5,7 @@ $registerEvents = {
 		$registerEvents.addDivEvents();
 		$registerEvents.addTabEvents();
 		$registerEvents.addPanelEvents();
+		$registerEvents.addNavEvents();
 	},
 	addButtonEvents : function() {
 		$("#upload-screenshot").on("click", function(event) {
@@ -22,9 +23,21 @@ $registerEvents = {
 		$("#api-send-button").on("click", function(event) {
 			$apiEventHandler.send("https://www.google.com");
 		});
-		
-		$(".sidebar-open-button").on("click", function(event){
-			$("#side-nav").animate({width: "250px", opacity: "1"});
+
+		$(".sidebar-open-button").on("click", function(event) {
+			if ($wsf.appModel.navbar.status == "closed") {
+				$("#side-nav").animate({
+					width : "250px",
+					opacity : "1"
+				});
+				$wsf.appModel.navbar.status = "open";
+			} else if($wsf.appModel.navbar.status == "open") {
+				$("#side-nav").animate({
+					width : "10px",
+					opacity : "0"
+				});
+				$wsf.appModel.navbar.status = "closed";
+			}
 		});
 	},
 	addTabEvents : function() {
@@ -61,6 +74,11 @@ $registerEvents = {
 				$(this).parents(".panel").addClass('panel-fullsize');
 
 			}
+		});
+	},
+	addNavEvents : function(){
+		$("#side-nav").on("click", function(event) {
+			$(".sidebar-open-button").get(0).click();
 		});
 	}
 }

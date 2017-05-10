@@ -11,7 +11,7 @@
 <script src="js/init.js"></script>
 <script>
 	$ts.preinit();
-    $ts.registerGlobalNameSpace();
+	$ts.registerGlobalNameSpace();
 </script>
 <!--  Starts Scripts Hierarchy -->
 <!-- Load third Party Files First -->
@@ -41,6 +41,7 @@
 <script src="js/models/dialogModel.js"></script>
 <script src="js/models/liveBrowserModels.js"></script>
 <script src="js/models/nodeRequires.js"></script>
+<script src="js/models/appModel.js"></script>
 <!-- Load views -->
 <script src="js/views/mainView.js"></script>
 <script src="js/views/quickaccessView.js"></script>
@@ -48,10 +49,11 @@
 <script src="js/views/livebrowserView.js"></script>
 <!-- Load Library Files -->
 <script src="js/lib/quickaccessUI.js"></script>
+<script src="js/lib/navUI.js"></script>
 <!--  init and load angular -->
 <script>
 	var $angular = angular.module('workspaceApp', []);
-    $ts.registerAngularAll();
+	$ts.registerAngularAll();
 </script>
 <!-- End of scripts Hierarchy -->
 </head>
@@ -90,6 +92,10 @@
 	</div>
 	<div role="tab-panel" class="dark-theme">
 		<nav id="side-nav" class="side-nav dark-theme">
+			<div class="header-logo">
+				<a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
+				<!-- <a href="index.html" class="main-logo">Workspace Fabric</a> -->
+			</div>
 			<ul id="main-nav-tabs" class="nav nav-tabs nav-stacked">
 				<li id="quick-access-li" class="active"><a data-toggle="tab"
 					href="#quick-access"> <span class="icon"><img

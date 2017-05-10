@@ -9,6 +9,7 @@ var $ts = {
 	init : function() {
 		$ts.isServerHealthy();
 		$registerEvents.initEvents();
+		appModelInit();
 		// Pre cache Parent Nodes in a global variable for the other operations
 		// to work
 		$genericViews.loadIdNodesFromUI();

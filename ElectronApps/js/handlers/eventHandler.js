@@ -31,7 +31,7 @@ $registerEvents = {
 					opacity : "1"
 				});
 				$wsf.appModel.navbar.status = "open";
-			} else if($wsf.appModel.navbar.status == "open") {
+			} else if ($wsf.appModel.navbar.status == "open") {
 				$("#side-nav").animate({
 					width : "10px",
 					opacity : "0"
@@ -76,10 +76,11 @@ $registerEvents = {
 			}
 		});
 	},
-	addNavEvents : function(){
-		/*$("#side-nav").on("click", function(event) {
-			event.preventDefault();
-			$(".sidebar-open-button").trigger("click");
-		});*/
+	addNavEvents : function() {
+		$("#side-nav").on("click", function(event) {
+			if (event.target.getAttribute("data-toggle") == "tab") {
+				$(".sidebar-open-button").get(0).click();
+			}
+		});
 	}
 }

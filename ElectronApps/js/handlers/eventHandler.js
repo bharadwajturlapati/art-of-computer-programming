@@ -77,8 +77,9 @@ $registerEvents = {
 		});
 	},
 	addNavEvents : function(){
-		$("#side-nav").on("click", function(event) {
-			$(".sidebar-open-button").get(0).click();
-		});
+		/*$("#side-nav").on("click", function(event) {
+			event.preventDefault();
+			$(".sidebar-open-button").trigger("click");
+		});*/
 	}
 }

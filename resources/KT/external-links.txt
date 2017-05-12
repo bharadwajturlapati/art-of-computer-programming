@@ -12,3 +12,5 @@ Right Click on the project -> select configure -> update project to maven projec
 3. How to check for transitive dependencies in maven.
 Sol:
 mvn dependency:tree
+
+https://github.com/agelastic/eudyptula

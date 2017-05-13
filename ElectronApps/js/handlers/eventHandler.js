@@ -21,14 +21,20 @@ $registerEvents = {
 			$livebrowserEventHandler.loadURL("https://www.google.com");
 		});
 		$("#api-send-button").on("click", function(event) {
-			$apiEventHandler.send("https://www.google.com");
+			$apiEventHandler.send($("#api-url").val());
 		});
 
 		$(".sidebar-open-button").on("click", function(event) {
 			if ($wsf.appModel.navbar.status == "closed") {
 				$("#side-nav").animate({
-					width : "250px",
 					opacity : "1"
+				}, {
+					"queue" : false
+				});
+				$("#side-nav").animate({
+					width : "250px",
+				}, {
+					"queue" : false
 				});
 				$wsf.appModel.navbar.status = "open";
 			} else if ($wsf.appModel.navbar.status == "open") {

@@ -4,5 +4,8 @@ var $nodeRequire = {
 	},
 	randomid : function() {
 		return require("random-id");
+	},
+	json_format : function(){
+		return require('json-format');
 	}
 }

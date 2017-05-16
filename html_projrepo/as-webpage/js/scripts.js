@@ -1,24 +1,3 @@
-/*
-   
-   Table Of Content
-   
-   1. Preloader
-   2. Smooth Scroll
-   3. Scroll Naviagation Background Change with Sticky Navigation
-   4. Mobile Navigation Hide or Collapse on Click
-   5. Scroll To Top
-   6. Typed.js
-   7. Parallax Background
-   8. Portfolio Filtering
-   9. Magnific Popup
-  10. Testimonial Carousel/Slider
-  11. Statistics Counter
-  12. Google Map
- 
-
-*/
-
-
 (function ($) {
     'use strict';
 
@@ -69,20 +48,18 @@
 		  $('html, body').animate({scrollTop : 0},800);
 		  return false;
 	    });
-		
-		
-		
-		
-        /* Typed.js */
-		
+
+
         $(window).load(function(){
-        $(".typing").typed({
-            strings: ["Dream","Believe","Achieve"],
-            typeSpeed: 50
-          });
+			var w = new Worker("js/typingsworker.js");
+			w.onmessage = function(event) {
+				$(".typing").typed({
+					strings: ["1. Dream","2. Believe","3. Achieve"],
+					typeSpeed: 50
+				});
+			};
          });
-        
-		 
+
         /* Parallax Background */
 
         $(window).stellar({

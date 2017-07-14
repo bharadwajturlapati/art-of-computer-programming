@@ -1,4 +1,4 @@
-$wsf.ui.navui = function() {
+ $wsf.ui.navui = function() {
 	// Extract Data From Config Object 
 	var status = "closed";
 	//Define Getters and Setters for the UI Model

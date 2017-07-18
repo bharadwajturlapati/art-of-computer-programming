@@ -2,7 +2,15 @@ var $quickAccessDC = {
 	loadData : function() {
 		$networkUtils.ajaxPost(localmodels.loaddata_urlconfig);
 	},
-	data:undefined
+	data:undefined,
+	uploadRepoController : function(config) {
+		var QAItemInput = {};
+		QAItemInput.url = $("#repo-file-path").val();
+		QAItemInput.logicalname = $("#repo-name").val();
+		QAItemInput.logicalgroup = $("#repo-group").val();
+		var QuickAccessItem = new $wsf.ui.quickaccess(QAItemInput);
+		config.callback(QuickAccessItem);
+	}
 }
 
 var localmodels = {

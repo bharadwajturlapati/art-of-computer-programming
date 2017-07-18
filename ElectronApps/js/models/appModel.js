@@ -18,7 +18,7 @@ $wsf.appModel = {
 		children:[]
 	}
 }
-
+var QAGroupList = [];
 function addNavBar() {
 	var navbar = new $wsf.ui.navui();
 	$wsf.appModel.navbar = navbar;

@@ -12,7 +12,7 @@ $registerEvents = {
 			$controller.fileUploadController();
 		});
 		$("#open-electron-dialog").on("click", function(event) {
-			$controller.openElectronDialog($model.uploadConfig);
+			$quickAccessDC.uploadRepoController($model.uploadConfig);
 		});
 		$("#change-url").on("click", function(event) {
 			$livebrowserEventHandler.loadURL($("#live-browser-url").val());

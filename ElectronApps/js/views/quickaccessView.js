@@ -11,9 +11,9 @@ var $quickAccessView = {
 	        "class" : "default-flex-item",
 	        "meta" : "quick-access-data-node"
 	    })
-	    gridNode.appendChild($domUtils.createImageNode({
-		    "src" : $quickAccessView.processFileUrl(dataNode.fileurl)
-	    }))
+//	    gridNode.appendChild($domUtils.createImageNode({
+//		    "src" : $quickAccessView.processFileUrl(dataNode.fileurl)
+//	    }))
 
 	    $genericViews.cachedParentNodes.quickAccessBoxNode
 	            .appendChild(gridNode);

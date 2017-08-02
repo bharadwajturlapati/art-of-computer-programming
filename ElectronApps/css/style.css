@@ -1,11 +1,50 @@
-html{
-	width:100%;
-	height:100%;
+/*Index*/
+
+/*
+1. html tags
+2. customcss 
+4. button css
+*/
+
+/*
+HTML TAGS
+1. HTML
+2. BODY
+
+*/
+html {
+	width: 100%;
+	height: 100%;
 }
-body{
-	width:100%;
-	height:100%;
+
+body {
+	width: 100%;
+	height: 100%;
 }
+
+body::-webkit-scrollbar {
+	width: 10px;
+	height: 16px;
+}
+
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scroller-button {
+	width: 0;
+	height: 0;
+	display: none;
+}
+
+body::-webkit-scrollbar-corner {
+	background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
 .loading-panel {
 	/*
 	aligning center logic
@@ -38,10 +77,9 @@ body{
 	width: 250px;
 	opacity: 1;
 } */
-
 .tab-pane {
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 }
 
 .api-call-manager {
@@ -111,6 +149,7 @@ body{
 }
 
 .user-gravatar {
+	
 }
 
 .side-nav>ul>li {
@@ -125,69 +164,76 @@ body{
 .response-header {
 	line-height: 3;
 	border: 1px solid black;
-	padding-left:10px;
+	padding-left: 10px;
 }
 
 .response {
 	min-height: 250px;
-	width:100%;
+	width: 100%;
 	border: 1px solid black;
 }
-.api-config-tabs{
+
+.api-config-tabs {
 	height: 200px;
 }
 
-body::-webkit-scrollbar {
-    width: 10px;
-    height: 16px;
-}
- 
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-body::-webkit-scroller-button{
-	width: 0;
-    height: 0;
-    display: none;
-}
-
-body::-webkit-scrollbar-corner {
-    background-color: transparent;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,0,0.2);
-}
 .flex-item {
-  background: tomato;
-  padding: 5px;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: center;
+	background: tomato;
+	padding: 5px;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	line-height: 100px;
+	color: white;
+	font-weight: bold;
+	font-size: 2em;
+	text-align: center;
 }
 
-.header-logo{
+.header-logo {
 	width: 250px;
-    height: 25px;
-    background: rgba(0, 0, 0, 0.14);
-    color: #fff;
-    float: left;
-    text-align: center;
+	height: 25px;
+	background: rgba(0, 0, 0, 0.14);
+	color: #fff;
+	float: left;
+	text-align: center;
 }
 
-.main-logo{
-	color:#fff;
-	float:left;
+.main-logo {
+	color: #fff;
+	float: left;
+}
+/*
+Button CSS
+*/
+.btun {
+	display: block;
+	outline: 0;
+	padding: 5px 12px;
+	border-radius: 3px;
+	text-shadow: 1px 1px #1f272b;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #3D4850),
+		color-stop(4%, #313d45), color-stop(100%, #232B30));
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.btn-center {
+.btun:active {
+	background-position: 0 top;
 	position: relative;
-    vertical-align: middle;
-    left: 35%;
+	top: 1px;
+	padding: 6px 12px 4px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #20282D),
+		color-stop(51%, #252E34), color-stop(100%, #222A30));
+	box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.btun-dark {
+	color: #9fa8b0;
+	border: 1px solid #1c252b;
+}
+
+.btun-center {
+	position: relative;
+	vertical-align: middle;
+	left: 35%;
 }

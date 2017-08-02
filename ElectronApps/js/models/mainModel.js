@@ -30,8 +30,9 @@ var $model = {
 		}
 	},
 	fillAppModel : function() {
-		/*var randomID = $nodeRequire.randomid;
-		var qa_id = "qa"+randomID(20);
-		$appModel[qa_id].id = qa_id;*/
+		/*
+		 * var randomID = $nodeRequire.randomid; var qa_id = "qa"+randomID(20);
+		 * $appModel[qa_id].id = qa_id;
+		 */
 	}
 }

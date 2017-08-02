@@ -1,21 +1,21 @@
 $wsf.appModel = {
 	quickaccess : {
-		children:[]
+		children : []
 	},
 	browser : {
-		children:[]
+		children : []
 	},
 	todolist : {
-		children:[]
+		children : []
 	},
 	api : {
-		children:[]
+		children : []
 	},
 	fip : {
-		children:[]
+		children : []
 	},
 	own : {
-		children:[]
+		children : []
 	}
 }
 var QAGroupList = [];

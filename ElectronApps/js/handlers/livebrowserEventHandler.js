@@ -18,9 +18,9 @@ var $livebrowserEventHandler = {
 		$("#main-nav-tabs").removeClass();
 		$("#main-nav-tabs").addClass("nav nav-tabs hide-main-nav-tabs");
 	},
-	processID: function(id) {
-		if(!id.startsWith("#")){
-			return "#"+id;
+	processID : function(id) {
+		if (!id.startsWith("#")) {
+			return "#" + id;
 		}
 	}
 }

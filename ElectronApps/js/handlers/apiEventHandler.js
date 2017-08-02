@@ -8,11 +8,11 @@ var $apiEventHandler = {
 				var jsonFormatter = $nodeRequire.json_format();
 				CodeMirror($("#api-response").get(0), {
 					value : jsonFormatter(data),
-					matchBrackets: true,
-			        autoCloseBrackets: true,
-			        mode: "application/ld+json",
-			        lineWrapping: true,
-			        lineNumbers:true
+					matchBrackets : true,
+					autoCloseBrackets : true,
+					mode : "application/ld+json",
+					lineWrapping : true,
+					lineNumbers : true
 				});
 			},
 			requestType : "get",

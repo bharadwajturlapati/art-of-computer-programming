@@ -21,7 +21,7 @@ var $registerAngularControllers = {
 		var len = array.length;
 		var resultArray = new Array();
 		for (i = 0; i < len; i++) {
-			var data = {};			
+			var data = {};
 			var path = array[i]
 			if (path.length > 2) {
 				data.id = j;

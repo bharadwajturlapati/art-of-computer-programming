@@ -1,0 +1,23 @@
+/*
+-----------------------------
+Index
+----------------------------
+1. Color
+2. BackGround Color
+*/
+/*
+Color
+*/
+.color-white {
+	color: white;
+}
+
+.color-bright-ahref-blue {
+	color: #4080d0;
+}
+/*
+BackGround
+*/
+.background-color-dark {
+	background-color: #1e1e1e;
+}

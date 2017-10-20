@@ -5,6 +5,8 @@
 		<!-- Loding CSS Files-->
 		<link rel="stylesheet" type="text/css" href="css/tparty/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/splash/splash.css">
+		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/colors.css">
 		<!-- Load JS Files -->
 		<!-- Electron related Fix  -->
 		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
@@ -15,13 +17,13 @@
 		<!-- Electron related Fix -->
 		<script>if (window.module) module = window.module;</script>
 	</head>
-	<body>
-		<div>
-			WorkSpaceFabric
+	<body onload="setTimeOutToReleaseSplash()"class="background-color-dark">
+		<div class="postion-relative color-bright-ahref-blue top-p-20 left-p-40">
+			<h2>WorkSpaceFabric</h2>
 		</div>
 		<div id="spinner" class="loader">
 		</div>
-		<div>
+		<div class="color-bright-ahref-blue">
 			&copy; AgnosticStrings 2017
 		</div>
 	</body>

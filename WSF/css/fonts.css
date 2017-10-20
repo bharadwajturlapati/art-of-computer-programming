@@ -1,0 +1,32 @@
+/*
+Index
+
+1. Position
+2. Top
+3. Left
+*/
+
+/*
+Position
+*/
+.postion-relative {
+	position: relative;
+}
+
+/*
+Top
+*/
+.top-p-20 {
+	top: 20%;
+}
+
+.top-p-40 {
+	top: 40%;
+}
+
+/*
+Left
+*/
+.left-p-40 {
+	left: 40%;
+}

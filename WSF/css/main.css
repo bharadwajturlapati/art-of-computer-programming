@@ -1,0 +1,40 @@
+@font-face {
+    font-family: sanslight;
+    src: url(../fonts/OpenSansCondensed-Light.ttf);
+}
+
+body{
+	font-family: 'sanslight';
+	margin: 0px;
+}
+.main-table{
+	width:100%;
+	height: 100%;
+}
+.main-table-row{
+	width:100%;
+}
+.side-nav-cell{
+	width:54px;
+	background-color:#336cb3;
+	vertical-align: top;
+}
+.widget-view-cell{
+}
+.side-nav-class{
+
+}
+.operations{
+	list-style: none
+	width: 54px;
+    padding: 0px;}
+
+.operations >li{
+	height:50px;
+	margin-top: 10px;
+}
+ .operations >li>img{
+ 	width: 48px;
+    height: 48px;
+    margin-left: 2px;
+ }

@@ -8,7 +8,6 @@ function showMainPage(){
 
 function setTimeOutToReleaseSplash(){
 	setTimeout(function(){
-		dismiss();
 		showMainPage();
-	}, 1500);
+	}, 3000);
 }

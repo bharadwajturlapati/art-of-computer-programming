@@ -2,6 +2,12 @@ var workspaceApp = angular.module('workspaceFabric',['ngRoute']);
 
 workspaceApp.controller('mainController', function($scope){
     $scope.message = '';
+    $scope.addPlace = function(){
+    	$("#popup-quickAccess").show();
+    };
+    $scope.addLocationtoGrid = function(){
+		$("#popup-quickAccess").hide();
+    };
 });
 
 workspaceApp.config(function($routeProvider) {

@@ -1,3 +1,6 @@
+<div class="quick-access-banner">
+	QuickAccess
+</div>
 <section class="products">
 	<div class="product-card">
 		<div class="product-image">
@@ -71,9 +74,10 @@
 			<h6>$99.99</h6>
 		</div>
 	</div>
-	<div class="product-card">
-		<div class="product-image">
-			<img src="assets/img/coat-01.jpeg">
+	<div ng-click="addPlace()" class="product-card">
+		<div id="addplace" class="product-image">
+			<i class="fa fa-plus"></i>
+			<span>Add a place</span>
 		</div>
 		<div class="product-info">
 			<h5>Winter Jacket</h5>
@@ -81,3 +85,8 @@
 		</div>
 	</div>
 </section>
+<div id="popup-quickAccess" class="popup-quickAccess">
+	<div>Path : <input type="text" name="path" placeholder="input the path"/></div>
+	<div>Name : <input type="text" name="identifier" placeholder="location name"/></div>
+	<div><button id="addLocation" ng-click="addLocationtoGrid()">Add Location</button></div>
+</div>

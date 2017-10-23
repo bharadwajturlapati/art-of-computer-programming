@@ -8,10 +8,14 @@
     /* flex: 1 18%; */
     margin: 10px;
     border: 2px solid white;
+    color: white;
+    width: 250px;
+    height: 250px;
 }
 .product-image{
 	width: 150px;
 	height: 150px;
+	color: white;
 }
 
 .product-image > i{

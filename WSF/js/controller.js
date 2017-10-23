@@ -6,7 +6,13 @@ workspaceApp.controller('mainController', function($scope){
     	$("#popup-quickAccess").show();
     };
     $scope.addLocationtoGrid = function(){
+    	var inputpath = $("#input-path").val();
+    	var locaname = $("#loca-name").val();
+    	addLocation(inputpath, locaname);
 		$("#popup-quickAccess").hide();
+    };
+    $scope.closeDialog = function(){
+    	$("#popup-quickAccess").hide();
     };
 });
 

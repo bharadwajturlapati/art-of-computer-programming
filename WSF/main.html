@@ -1,9 +1,10 @@
-<html lang="en" ng-app="workspaceFabric" >
+<html lang="en" ng-app="workspaceFabric">
 	<head>
 		<title>WorkSpace Fabric</title>
 		<meta charset="utf-8">
 		<!-- Loding CSS Files-->
 		<link rel="stylesheet" type="text/css" href="css/tparty/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/quickaccess.css">
 		<link rel="stylesheet" type="text/css" href="css/colors.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -11,6 +12,8 @@
 		<!-- Electron related Fix  -->
 		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 		<script src="js/tparty/angular.min.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"></script>
 		<script src="js/tparty/jquery-3.2.1.min.js" type="text/javascript"></script>
 		<script src="js/tparty/bootstrap.min.js" type="text/javascript"></script>
 		<script src="js/controller.js" type="text/javascript"></script>
@@ -18,7 +21,7 @@
 		<!-- Electron related Fix -->
 		<script>if (window.module) module = window.module;</script>
 	</head>
-	<body class="background-color-dark">
+	<body class="background-color-dark" ng-controller="mainController">
 		<table class="main-table">
 			<tr class="main-table-row">
 				<td class="side-nav-cell">
@@ -26,13 +29,14 @@
 						<ul class="operations">
 							<!-- dummy li element to generate some space -->
 							<li></li>
+							<li></li>
 							<li><img src="imgs/agnosticstrings.png"></li>
 							<li><img src="imgs/quick-access.png"></li>
 						</ul>
 					</div>
 				</td>
 				<td class="widget-view-cell">
-					<div id="widget-view">
+					<div id="widget-view" ng-view>
 					</div>
 				</td>
 			</tr>

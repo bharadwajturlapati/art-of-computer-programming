@@ -20,6 +20,8 @@ body{
 	vertical-align: top;
 }
 .widget-view-cell{
+	vertical-align: top;
+	text-align: left;
 }
 .side-nav-class{
 

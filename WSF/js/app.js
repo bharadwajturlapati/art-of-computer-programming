@@ -1,4 +1,4 @@
-const fs = require("fs");
+
 function addLocation(inputpath, locaname){
 	var htmlString = quickAccessModel(inputpath, locaname);
 

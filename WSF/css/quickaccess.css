@@ -21,7 +21,7 @@
 .product-image > i{
 	position: relative;
     top: 75px;
-    left: 58px;
+    left: 75px;
 }
 
 .product-image img {
@@ -34,7 +34,7 @@
 
 .quick-access-banner{
 	margin-top: 28px;
-	font-size:36px;
+	font-size:25px;
 	color:#336cb3;
 }
 

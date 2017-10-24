@@ -4,7 +4,6 @@
 }
 
 body{
-	font-family: 'sanslight';
 	margin: 0px;
 }
 .main-table{
@@ -43,7 +42,7 @@ body{
  }
 
  .dashboard-banner{
- 	font-size: 48px;
+ 	font-size: 36px;
  	color:#336cb3;
  	border-bottom:2px solid white;
  }
@@ -58,7 +57,7 @@ body{
  .trail-user-banner{
  	float: right;
     position: relative;
-    right: 20%;
-    font-size: 18px;
+    right: 15%;
+    font-size: 14px;
     color: white;
  }

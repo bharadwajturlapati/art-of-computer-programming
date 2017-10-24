@@ -17,11 +17,12 @@
 		<script src="js/tparty/jquery-3.2.1.min.js" type="text/javascript"></script>
 		<script src="js/tparty/bootstrap.min.js" type="text/javascript"></script>
 		<script src="js/controller.js" type="text/javascript"></script>
+		<script src="js/eventhandlers/onclickhandlers.js" type="text/javascript"></script>
 		<script src="js/app.js" type="text/javascript"></script>
 		<!-- Electron related Fix -->
 		<script>if (window.module) module = window.module;</script>
 	</head>
-	<body class="background-color-dark" ng-controller="mainController">
+	<body class="background-color-dark" ng-controller="mainController" onload="init()">
 		<table class="main-table">
 			<div class="user-banner"><span class="trail-user-banner"><i class="fa fa-user-o"></i>&nbsp;&nbsp;&nbsp;Trail User</span></div>
 			<tr class="main-table-row">
@@ -30,7 +31,7 @@
 						<ul class="operations">
 							<!-- dummy li element to generate some space -->
 							<li><img src="imgs/dummy.png"></li>
-							<li><img src="imgs/agnosticstrings.png"></li>
+							<li><img id="openHomePage" src="imgs/agnosticstrings.png"></li>
 							<li><img src="imgs/quick-access.png"></li>
 						</ul>
 					</div>
@@ -43,5 +44,4 @@
 			</tr>
 		</table>
 	</body>
-	<script src="js/quickaccess.js" type="text/javascript"></script>
 </html>

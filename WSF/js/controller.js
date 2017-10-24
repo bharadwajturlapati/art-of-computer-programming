@@ -8,11 +8,14 @@ workspaceApp.controller('mainController', function($scope){
     $scope.addLocationtoGrid = function(){
     	var inputpath = $("#input-path").val();
     	var locaname = $("#loca-name").val();
-    	addLocation(inputpath, locaname);
+    	addLocation(inputpath, locaname, true);
 		$("#popup-quickAccess").hide();
     };
     $scope.closeDialog = function(){
     	$("#popup-quickAccess").hide();
+    };
+    $scope.initAddQuickAccessTab = function(){
+    	initAddQuickAccessTab();
     };
 });
 

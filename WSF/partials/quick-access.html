@@ -2,13 +2,12 @@
 	QuickAccess
 </div>
 <section class="products" id="locations">
-	<div ng-click="addPlace()" class="product-card">
-		<div id="addplace" class="product-image">
+	<div ng-click="addPlace()" class="product-card-add">
+		<div id="addplace" class="product-image-add product-add">
 			<i class="fa fa-plus color-white"></i>
-			<span>Add a place</span>
 		</div>
 		<div class="product-info">
-			<h5></h5>
+			<h5>Add a place</h5>
 			<h6></h6>
 		</div>
 	</div>
@@ -18,4 +17,6 @@
 	<div style="margin-top:10px;"><span style="margin-left:5px; margin-right:5px;">Path :</span><input type="text" id="input-path" name="path" placeholder="input the path"/></div>
 	<div style="margin-top:10px;"><span style="margin-left:5px; margin-right:5px;">Name :</span><input type="text" id="loca-name" name="identifier" placeholder="location name"/></div>
 	<div style="margin-top:10px;"><button style="border:none;margin: 4px 2px;" id="addLocation" ng-click="addLocationtoGrid()">Add Location</button></div>
+</div>
+<div id="cardAsTree" class="card-as-tree">
 </div>

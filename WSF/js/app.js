@@ -21,7 +21,7 @@ function quickAccessModel(inputpath, locaname, id){
 }
 
 function initAddQuickAccessTab(){
-	fetch("http://127.0.0.1:8000/api/quickaccess/",{
+	fetch("http://127.0.0.1:8000/waas/api/quickaccess/",{
     	method: "GET"
 	})
 	.then(function(res){ return res.json(); })
@@ -51,7 +51,7 @@ function addLocationToDB(inputpath, locaname){
     	"nickname": locaname,
     	"logicalgroup": ""
 	};
-	fetch("http://127.0.0.1:8000/api/quickaccess/",{
+	fetch("http://127.0.0.1:8000/waas/api/quickaccess/",{
     	method: "POST",
     	body: JSON.stringify(payload),
     	headers:{
@@ -64,7 +64,7 @@ function addLocationToDB(inputpath, locaname){
 
 function removeFromDB(){
 	var id = event.currentTarget.getAttribute("data");
-	var delete_url = "http://127.0.0.1:8000/api/quickaccess/"+id;
+	var delete_url = "http://127.0.0.1:8000/waas/api/quickaccess/"+id;
 	fetch(delete_url,{
     	method: "DELETE"
 	})

@@ -1,0 +1,17 @@
+.CodeMirror {
+	width: 99%;
+    height: 450px;
+}
+
+.docgen-banner-common{
+	color: white;
+	position: relative;
+	margin:10px;
+	left: 40%;
+}
+
+.uploadCollection{
+	position: relative;
+	margin:10px;
+	left: 40%;
+}

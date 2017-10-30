@@ -122,6 +122,10 @@ function initTabs(){
 		initAddQuickAccessTab();
 	}
 	if(tabLoaded == "docgen-tab"){
-		console.log("docgen tab loaded");
+		CodeMirror($("#code-mirror")[0],{
+			mode:"javascript",
+			lineNumbers:true,
+			theme:"base16-dark"
+		});
 	}
 }

@@ -41,6 +41,12 @@ body{
     margin-left: 2px;
  }
 
+ .operations >li>a>img{
+ 	width: 48px;
+    height: 48px;
+    margin-left: 2px;
+ }
+
  .dashboard-banner{
  	font-size: 36px;
  	color:#336cb3;

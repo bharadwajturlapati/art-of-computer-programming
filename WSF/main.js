@@ -13,7 +13,7 @@ let win;
 function createWindow () {
 	// Create the browser window.
 	const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
-	win = new BrowserWindow({width: width, height:height});
+	win = new BrowserWindow({width: width, height:height, icon: __dirname + '/imgs/favicon.png'});
   
 	// and load the index.html of the app.
 	win.loadURL(url.format({

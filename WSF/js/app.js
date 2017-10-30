@@ -115,3 +115,13 @@ function clearDomTree(node){
 function hideFolderView (){
      $("#cardAsTree").hide();
 }
+
+function initTabs(){
+	var tabLoaded = $("#widget-view")[0].childNodes[0].getAttribute("data");
+	if(tabLoaded == "qa-tab"){
+		initAddQuickAccessTab();
+	}
+	if(tabLoaded == "docgen-tab"){
+		console.log("docgen tab loaded");
+	}
+}

@@ -1,7 +1,6 @@
 var workspaceApp = angular.module('workspaceFabric',['ngRoute']);
 
 workspaceApp.controller('mainController', function($scope){
-    $scope.message = '';
     $scope.addPlace = function(){
     	$("#popup-quickAccess").show();
     };
@@ -14,8 +13,8 @@ workspaceApp.controller('mainController', function($scope){
     $scope.closeDialog = function(){
     	$("#popup-quickAccess").hide();
     };
-    $scope.initAddQuickAccessTab = function(){
-    	initAddQuickAccessTab();
+    $scope.initTabs = function(){
+    	initTabs();
     };
 });
 

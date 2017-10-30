@@ -25,5 +25,9 @@ workspaceApp.config(function($routeProvider) {
         .when('/', {
             templateUrl : 'partials/quick-access.html',
             controller  : 'mainController'
+        })
+        .when('/api-docgen', {
+            templateUrl : 'partials/api-docgen.html',
+            controller  : 'mainController'
         });
 });

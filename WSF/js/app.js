@@ -10,7 +10,10 @@ function quickAccessModel(inputpath, locaname, id){
 	var closeButton = "<div class='quickaccess-options'><i onclick='removeCurrentNode()' class='fa fa-times'></i>";
 	closeButton += "<i class='fa fa-trash-o' data='"+id+"' onclick='removeFromDB()'></i>";
 	var expand = "<i class='fa fa-expand' data='"+inputpath+"' onclick='callJSTreeInternal()'></i>";
+	var openInTerminal = "<i class='fa fa-terminal' data='"+inputpath+"' onclick='openInDefaultTerminal()'></i>"
+	expand+=openInTerminal;
 	closeButton += expand +"</div>"
+
 	var htmlString = "<div class='product-card'>";
 	htmlString += closeButton;
 	htmlString += "<div class='product-image' onclick='openinExplorer()' info='"+inputpath+"'>"
@@ -75,7 +78,6 @@ function removeFromDB(){
 }
 
 function viewInJsTree(){
-	var dirTree;
 	var location = event.currentTarget.getAttribute("data");
 	return fs.readdirSync(location);
 }
@@ -96,6 +98,12 @@ function callJSTreeInternal(){
 	clearDomTree($("#cardAsTree")[0]);
 	$("#cardAsTree").append(htmlString);
 	$("#cardAsTree").show();
+}
+
+function openInDefaultTerminal(){
+	var child_process = require('child_process');
+	var location = event.currentTarget.getAttribute("data");
+	child_process.execSync("cmd.exe /c start /d ;"+location);
 }
 
 function clearDomTree(node){

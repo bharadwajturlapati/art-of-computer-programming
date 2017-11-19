@@ -1,0 +1,87 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<style>
+		.request-method{
+			color: #FF4500;
+			margin: 10px 0 10px 10px;
+			font-weight: 600;
+		}
+		.request-name{
+			color: #666666;
+			margin: 0px 0px 0px 10px;
+			font-weight: 400;
+		}
+		.box{
+			border: 1px solid #e5e5e5;
+			border-radius: 2px;
+			background-color: #e5e5e5;
+			min-width: 300px;
+			margin: 10px 0 10px 10px;
+			padding: 5px 10px 5px 10px;
+			color: #666666;
+			font-size: small;
+		}
+		.request-box{
+			border: 1px solid #e5e5e5;
+			border-radius: 10px;
+			padding:10px 10px 10px 10px;
+			margin: 10px 10px 10px 10px;
+			font-size: small;
+		}
+		.each-header-section{
+			border: 1px solid #FF4500;
+			border-radius: 5px;
+   			margin: 5px;
+    		padding: 5px;
+		}
+		.each-header{
+
+		}
+		</style>
+	</head>
+	<body style="font-family: sans-serif;">
+		<section>
+			<div class="request-method">
+				Collection Name
+			</div>
+			<div class="box">
+				Collection Description
+			</div>
+		</section>
+		<section class="request-box">
+			<div class="request-method">
+				POST<span class="request-name">Hello</span>
+			</div>
+			<div class="box">
+				http:// www.google.com
+			</div>
+			<div class="request-method">
+				HEADERS
+			</div>
+			<div class="box">
+				<section class="each-header-section">
+					<div class="each-header">Key : Value</div>
+					<div class="each-header-desc">Description : </div>
+				</section>
+			</div>
+			<div class="request-method">
+				BODY
+			</div>
+			<div class="box">
+				<section class="each-header-section">
+					<div class="each-header">form-data</div>
+					<div class="each-header-desc">Description : </div>
+				</section>
+				<section class="each-header-section">
+					<div class="each-header">x-www-form-urlencoded</div>
+					<div class="each-header-desc">Description : </div>
+				</section>
+				<section class="each-header-section">
+					<div class="each-header">raw body</div>
+					<div class="each-header-desc">Description : </div>
+				</section>
+			</div>
+		</section>
+	</body>
+</html>

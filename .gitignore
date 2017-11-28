@@ -4,3 +4,4 @@ RemoteSystemsTempFiles
 *.exe
 *.class
 *.pyc
+WSF/release-builds

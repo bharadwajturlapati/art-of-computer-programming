@@ -24,5 +24,16 @@ function generateApiDoc(){
 }
 
 function postToServer(fileData){
-	console.log(fileData.toString('utf-8'));
+	fetch("http://127.0.0.1:8000/waas/api/apidocgen/",{
+    	method: "POST",
+    	body: fileData.toString('utf-8'),
+    	headers:{
+    				"Content-Type": "application/json"
+    			}
+	})
+	.then(function(res){ return res.text(); })
+	.then(function(data){ 
+		console.log(data);
+		window.open("data:text/html;charset=utf-8,"+data, "", "_blank");
+	});
 }

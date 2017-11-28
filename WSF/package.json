@@ -5,13 +5,13 @@
   "main": "main.js",
   "devDependencies": {
     "electron": "^1.7.9",
-    "electron-packager": "^10.1.0"
-	},
+    "electron-packager": "^10.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-run": "^1.7.1"
+  },
   "scripts": {
-	"package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds",
-	
-	"package-win": "electron-packager . WorkSpace Fabric --overwrite  --platform=win32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE",    
-	
-	"package-linux": "electron-packager . WorkSpace Fabric --overwrite --platform=linux --arch=x64 --prune=true --out=release-builds"
-	}
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds",
+    "package-win": "electron-packager . WorkSpace Fabric --overwrite  --platform=win32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE",
+    "package-linux": "electron-packager . WorkSpace Fabric --overwrite --platform=linux --arch=x64 --prune=true --out=release-builds"
+  }
 }

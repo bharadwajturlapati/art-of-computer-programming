@@ -20,13 +20,17 @@ workspaceApp.controller('mainController', function($scope){
 
 workspaceApp.config(function($routeProvider) {
     $routeProvider
-        // route for the home page
+        // SPA router configurations
         .when('/', {
             templateUrl : 'partials/quick-access.html',
             controller  : 'mainController'
         })
         .when('/api-docgen', {
             templateUrl : 'partials/api-docgen.html',
+            controller  : 'mainController'
+        })
+        .when('/path-vars', {
+            templateUrl : 'partials/path-vars.html',
             controller  : 'mainController'
         });
 });

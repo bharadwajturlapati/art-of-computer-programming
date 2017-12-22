@@ -3,6 +3,9 @@ package SimpleClustering;
 import java.util.HashMap;
 import java.util.Map;
 
+import SimpleClustering.ResultHandler.GenericHandler;
+import SimpleClustering.ResultHandler.ResultHandler;
+
 public class DiscreteSet {
 
 	public static final String[] marksList = { "50", "40", "102", "90", "82", "70", "65", "93", "55", "-1" };
@@ -32,25 +35,13 @@ public class DiscreteSet {
 	private static Space grade() {
 		Map<String, Object> studentsMap = listOfStudents();
 		Space studentSpace = new Space();
+		
+		
 		for (int i = 0; i < studentsMap.size(); i++) {
 			Student student = (Student) studentsMap.get(String.valueOf(i));
 			Result result = StudentGradingSystem.booleanGrading(student);
-
-			if (result.getStatus() == ClassificationStatus.ERROR) {
-				studentSpace.setToErrorCluster(result);
-			}
-
-			if (result.getStatus() == ClassificationStatus.FAIL) {
-				studentSpace.setToMinEfficacyCluster(result);
-			}
-
-			if (result.getStatus() == ClassificationStatus.PASS) {
-				studentSpace.setToMaximumEfficacyCluster(result);
-			}
-
-			if (result.getStatus() == ClassificationStatus.SYSTEMEXCEPTION) {
-				studentSpace.setToExceptionsMap(result.getEntity().getResourceId(), result.getEntity());
-			}
+			GenericHandler resHandler = ResultHandler.getHandler(result.getStatus());
+			resHandler.resolve(studentSpace, result);
 		}
 
 		return studentSpace;

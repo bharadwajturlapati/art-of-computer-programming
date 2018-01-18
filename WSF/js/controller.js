@@ -32,5 +32,13 @@ workspaceApp.config(function($routeProvider) {
         .when('/path-vars', {
             templateUrl : 'partials/path-vars.html',
             controller  : 'mainController'
+        })
+        .when('/credits', {
+            templateUrl : 'partials/credits.html',
+            controller  : 'mainController'
+        })
+        .when('/formatter', {
+            templateUrl : 'partials/formatter.html',
+            controller  : 'mainController'
         });
 });

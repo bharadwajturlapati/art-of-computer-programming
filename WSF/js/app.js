@@ -121,7 +121,7 @@ function initTabs(){
 	if(tabLoaded == "qa-tab"){
 		initAddQuickAccessTab();
 	}
-	if(tabLoaded == "docgen-tab"){
+	if(tabLoaded == "docgen-tab" || tabLoaded == "simple-formatter"){
 		CodeMirror($("#code-mirror")[0],{
 			mode:"javascript",
 			lineNumbers:true,

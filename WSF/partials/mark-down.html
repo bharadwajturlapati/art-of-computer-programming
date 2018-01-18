@@ -6,20 +6,28 @@
 		<!-- Loding CSS Files-->
 		<link rel="stylesheet" type="text/css" href="../css/tparty/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/tparty/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/markit.css">
 		<!--Loading JS Files -->
 		<!-- Electron related Fix  -->
 		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 		<script src="../js/tparty/jquery-3.2.1.min.js" type="text/javascript"></script>
 		<script src="../js/tparty/bootstrap.min.js" type="text/javascript"></script>
 		<script src="../js/tparty/markdown/markdown-it.min.js" type="text/javascript"></script>
+		<script src="../js/mark-it-app.js" type="text/javascript"></script>
 		<!-- Electron related Fix -->
 		<script>if (window.module) module = window.module;</script>
 	</head>
 	<body>
-		<section id="textAreaInput">
-		</section>
-		<section>
-			
-		</section>
+		<div class="body_wrap">
+			<button class="btn" onclick="loadExample()">Load Sample</button>
+			<div>Ctrl+S</div>
+			<div id="markit_div" class="markit">
+				<section class="markit-input-section">
+					<textarea class="markit-text-input" id="textAreaInput"></textarea>
+				</section>
+				<section id="markit-output" class="markit-output-section">
+				</section>
+			</div>
+		</div>
 	</body>
 </html>

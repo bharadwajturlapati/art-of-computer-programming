@@ -8,11 +8,11 @@ var credentials = {
 
 var claims = {
 	"security_attributes": {
-		"session_token": "",
+		"session_token": "%s",
 		"session_ttl": "-1"
 	},
 	"user_attributes": {
-		"userid": "bharadwaj.turlapati@kony.com",
+		"user_id": "bharadwaj.turlapati@kony.com",
 		"email": "bharadwaj.turlapati@kony.com",
 		"firstname": "bharadwaj",
 		"lastname": "turlapati",
@@ -42,7 +42,7 @@ function respond(req, res, next) {
 }
 
 function respond_to_login(req, res, next){
-	//res.send(processToken(req));
+	processToken(req);
 	res.send(claims);
 	next();
 }
@@ -55,11 +55,12 @@ function respond_to_logout(req, res, next){
 function processToken(request){
 	var custom_auth_header = request.headers["x-custom-auth"];
 	console.log("START******************START");
+	console.log("****************** HEADERS");
 	console.log(request.headers);
-	console.log("******************");
+	console.log("****************** BODY");
 	console.log(request.body);
 	console.log("END******************END");
-	if (!custom_auth_header) {
+	/*if (!custom_auth_header) {
         return failure_response;
     }
 
@@ -74,6 +75,7 @@ function processToken(request){
     }
     
 	return failure_response;
+	*/
 }
 
 var server = restify.createServer();

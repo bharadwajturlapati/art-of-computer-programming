@@ -1,4 +1,4 @@
-@ECHO off
+@echo off
 rem start server if not started
 rem create waas folder in program data
 set CURRENT_DIR=%cd%
@@ -7,10 +7,18 @@ set PROGRAM_DATA=C:\ProgramData\
 set APPSERVER_INSTALLTION_DIR=E:\Frameworks\waas
 set DATA_DIR=E:\Frameworks\data
 
-if not exist APP_DATA goto createwaasdir
+if exist %APP_DATA% (call:removewaas) else (call:createwaasdir)
+GOTO:EOF
+
+:removewaas
+rmdir /s /q %APP_DATA%
+call:createwaasdir
+GOTO:EOF
+
 :createwaasdir
 mkdir %PROGRAM_DATA%\WAAS
 mkdir %PROGRAM_DATA%\WAAS\appserver
 mkdir %PROGRAM_DATA%\WAAS\data
 xcopy /e /v %APPSERVER_INSTALLTION_DIR% %PROGRAM_DATA%\WAAS\appserver
 xcopy /e /v %DATA_DIR% %PROGRAM_DATA%\WAAS\data 
+GOTO:EOF

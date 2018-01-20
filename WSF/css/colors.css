@@ -25,3 +25,7 @@ BackGround
 .background-user-banner {
 	background-color:#2684ff;
 }
+
+span{
+	color: rgba(255, 255, 255, 0.7);
+}

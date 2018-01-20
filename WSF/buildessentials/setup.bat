@@ -1,5 +1,4 @@
 @echo off
-rem start server if not started
 rem create waas folder in program data
 set CURRENT_DIR=%cd%
 set APP_DATA=C:\ProgramData\WAAS

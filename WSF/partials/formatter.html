@@ -1,4 +1,29 @@
-<div data="simple-formatter">
-	<div id="code-mirror" class="code-mirror"></div>
-	<div id="format-output" class=""></div>
-</div>
+<html lang="en">
+	<head>
+		<title>WSF|Formatter</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="imgs/favicon.png">
+		<!-- Loding CSS Files-->
+		<link rel="stylesheet" type="text/css" href="../css/tparty/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/tparty/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/tparty/codemirror.css">
+		<link rel="stylesheet" type="text/css" href="../css/tparty/base16-dark.css">
+		<link rel="stylesheet" type="text/css" href="../css/colors.css">
+		<!--Loading JS Files -->
+		<!-- Electron related Fix  -->
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		<script src="../js/tparty/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="../js/tparty/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../js/tparty/codemirror.js" type="text/javascript"></script>
+		<script src="../js/tparty/javascript.js" type="text/javascript"></script>
+		<script src="../js/simpleformatter.js" type="text/javascript"></script>
+		<!-- Electron related Fix -->
+		<script>if (window.module) module = window.module;</script>
+	</head>
+	<body class="background-color-dark" onload="initFormatter()">
+		<div data="simple-formatter">
+			<div id="code-mirror" class="code-mirror"></div>
+			<div id="format-output" class=""></div>
+		</div>
+	</body>
+</html>

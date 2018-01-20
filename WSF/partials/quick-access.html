@@ -1,22 +1,46 @@
-<div data="qa-tab" class="quick-access-banner">
-	QuickAccess
-</div>
-<section class="products" id="locations">
-	<div ng-click="addPlace()" class="product-card-add">
-		<div id="addplace" class="product-image-add product-add">
-			<i class="fa fa-plus color-white"></i>
+<html lang="en">
+	<head>
+		<title>WSF|QuickAccess</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="imgs/favicon.png">
+		<!-- Loding CSS Files-->
+		<link rel="stylesheet" type="text/css" href="../css/tparty/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/tparty/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/tparty/base16-dark.css">
+		<link rel="stylesheet" type="text/css" href="../css/quickaccess.css">
+		<link rel="stylesheet" type="text/css" href="../css/colors.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<!--Loading JS Files -->
+		<!-- Electron related Fix  -->
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		<script src="../js/tparty/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="../js/tparty/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../js/controller.js" type="text/javascript"></script>
+		<!-- Electron related Fix -->
+		<script>if (window.module) module = window.module;</script>
+	</head>
+	<body class="background-color-dark">
+		<div data="qa-tab" class="quick-access-banner">
+			QuickAccess
 		</div>
-		<div class="product-info">
-			<h5>Add a place</h5>
-			<h6></h6>
+		<section class="products" id="locations">
+			<div onclick="addPlace()" class="product-card-add">
+				<div id="addplace" class="product-image-add product-add">
+					<i class="fa fa-plus color-white"></i>
+				</div>
+				<div class="product-info">
+					<h5>Add a place</h5>
+					<h6></h6>
+				</div>
+			</div>
+		</section>
+		<div id="popup-quickAccess" class="popup-quickAccess">
+			<div style="float:right;"><i onclick="closeDialog()" class="fa fa-times"></i></div>
+			<div style="margin-top:10px;"><span style="margin-left:5px; margin-right:5px;">Path :</span><input type="text" id="input-path" name="path" placeholder="input the path"/></div>
+			<div style="margin-top:10px;"><span style="margin-left:5px; margin-right:5px;">Name :</span><input type="text" id="loca-name" name="identifier" placeholder="location name"/></div>
+			<div style="margin-top:10px;"><button style="border:none;margin: 4px 2px;" id="addLocation" onclick="addLocationtoGrid()">Add Location</button></div>
 		</div>
-	</div>
-</section>
-<div id="popup-quickAccess" class="popup-quickAccess">
-	<div style="float:right;"><i ng-click="closeDialog()" class="fa fa-times"></i></div>
-	<div style="margin-top:10px;"><span style="margin-left:5px; margin-right:5px;">Path :</span><input type="text" id="input-path" name="path" placeholder="input the path"/></div>
-	<div style="margin-top:10px;"><span style="margin-left:5px; margin-right:5px;">Name :</span><input type="text" id="loca-name" name="identifier" placeholder="location name"/></div>
-	<div style="margin-top:10px;"><button style="border:none;margin: 4px 2px;" id="addLocation" ng-click="addLocationtoGrid()">Add Location</button></div>
-</div>
-<div id="cardAsTree" class="card-as-tree">
-</div>
+		<div id="cardAsTree" class="card-as-tree">
+		</div>
+	</body>
+</html>

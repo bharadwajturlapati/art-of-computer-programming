@@ -1,4 +1,4 @@
-<html lang="en" ng-app="workspaceFabric">
+<html lang="en">
 	<head>
 		<title>WorkSpace Fabric</title>
 		<meta charset="utf-8">
@@ -8,29 +8,15 @@
 		<link rel="stylesheet" type="text/css" href="css/tparty/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/tparty/codemirror.css">
 		<link rel="stylesheet" type="text/css" href="css/tparty/base16-dark.css">
-		<link rel="stylesheet" type="text/css" href="css/quickaccess.css">
-		<link rel="stylesheet" type="text/css" href="css/apidocgen.css">
-		<link rel="stylesheet" type="text/css" href="css/credits.css">
 		<link rel="stylesheet" type="text/css" href="css/colors.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<!--Loading JS Files -->
 		<!-- Electron related Fix  -->
 		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-		<script src="js/tparty/angular.min.js" type="text/javascript"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"></script>
-		<script src="js/tparty/jquery-3.2.1.min.js" type="text/javascript"></script>
-		<script src="js/tparty/bootstrap.min.js" type="text/javascript"></script>
-		<script src="js/tparty/codemirror.js" type="text/javascript"></script>
-		<script src="js/tparty/javascript.js" type="text/javascript"></script>
-		<script src="js/controller.js" type="text/javascript"></script>
-		<script src="js/eventhandlers/onclickhandlers.js" type="text/javascript"></script>
-		<script src="js/app.js" type="text/javascript"></script>
-		<script src="js/docgen-app.js" type="text/javascript"></script>
 		<!-- Electron related Fix -->
 		<script>if (window.module) module = window.module;</script>
 	</head>
-	<body class="background-color-dark" ng-controller="mainController" onload="init()">
+	<body class="background-color-dark">
 		<table class="main-table">
 			<div class="user-banner"><span class="trail-user-banner"><i class="fa fa-user-o"></i>&nbsp;&nbsp;&nbsp;Trail User</span></div>
 			<tr class="main-table-row">
@@ -39,18 +25,24 @@
 						<ul class="operations">
 							<!-- dummy li element to generate some space -->
 							<!--<li><img src="imgs/dummy.png"></li> -->
-							<li><a href="#!"><img src="imgs/quick-access.png"></a></li>
+							<!--<li><a href="#!"><img src="imgs/quick-access.png"></a></li>
 							<li><a href="#!api-docgen"><img src="imgs/api-docgen.png"></a></li>
 							<li><a href="#!path-vars"><img src="imgs/pathvars.png"></a></li>
-							<li><a href="javascript:void(0);" onclick="window.open('partials/mark-down.html', '_blank');"><img src="imgs/markdown.png"></a></li>
+							<li><a href="javascript:void(0);" onclick="window.open('partials/mark-down.html');"><img src="imgs/markdown.png"></a></li>
 							<li><a href="#!formatter"><img src="imgs/pathvars.png"></a></li>
-							<li><a href="#!credits"><img src="imgs/agnosticstrings.png"></a></li>
+							<li><a href="#!credits"><img src="imgs/agnosticstrings.png"></a></li>-->
+							<li><a href="javascript:void(0);" onclick="window.open('partials/quick-access.html');"><img src="imgs/quick-access.png"></a></li>
+							<li><a href="javascript:void(0);" onclick="window.open('partials/api-docgen.html');"><img src="imgs/api-docgen.png"></a></li>
+							<li><a href="javascript:void(0);" onclick="window.open('partials/path-vars.html');"><img src="imgs/pathvars.png"></a></li>
+							<li><a href="javascript:void(0);" onclick="window.open('partials/mark-down.html');"><img src="imgs/markdown.png"></a></li>
+							<li><a href="javascript:void(0);" onclick="window.open('partials/formatter.html');"><img src="imgs/pathvars.png"></a></li>
+							<li><a href="javascript:void(0);" onclick="window.open('partials/credits.html');"><img src="imgs/agnosticstrings.png"></a></li>
 						</ul>
 					</div>
 				</td>
 				<td class="widget-view-cell">
 					<!--<span class="dashboard-banner">DashBoard</span>-->
-					<div id="widget-view" ng-view onload="initTabs()">
+					<div id="widget-view">
 					</div>
 				</td>
 			</tr>

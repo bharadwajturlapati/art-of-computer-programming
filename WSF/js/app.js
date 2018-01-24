@@ -117,15 +117,13 @@ function hideFolderView (){
 }
 
 function initTabs(){
-	var tabLoaded = $("#widget-view")[0].childNodes[0].getAttribute("data");
-	if(tabLoaded == "qa-tab"){
 		initAddQuickAccessTab();
-	}
+	/* Left it for reference do not remove, this is how you initialize codemirror
 	if(tabLoaded == "docgen-tab" || tabLoaded == "simple-formatter"){
 		CodeMirror($("#code-mirror")[0],{
 			mode:"javascript",
 			lineNumbers:true,
 			theme:"base16-dark"
 		});
-	}
+	}*/
 }

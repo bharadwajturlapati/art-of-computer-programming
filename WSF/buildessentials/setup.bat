@@ -6,6 +6,8 @@ set APP_DATA=C:\ProgramData\WAAS
 set PROGRAM_DATA=C:\ProgramData\
 set APPSERVER_INSTALLTION_DIR=waas
 set DATA_DIR=data
+set APPDIR=WorkSpaceFabric
+set APPSETUP=appsetup
 
 if exist %APP_DATA% (call:removewaas) else (call:createwaasdir)
 GOTO:EOF
@@ -19,9 +21,17 @@ GOTO:EOF
 mkdir %PROGRAM_DATA%\WAAS
 mkdir %PROGRAM_DATA%\WAAS\appserver
 mkdir %PROGRAM_DATA%\WAAS\data
+mkdir %PROGRAM_DATA%\WAAS\app
+mkdir %PROGRAM_DATA%\WAAS\appsetup
 xcopy /e /v %APPSERVER_INSTALLTION_DIR% %PROGRAM_DATA%\WAAS\appserver
 xcopy /e /v %DATA_DIR% %PROGRAM_DATA%\WAAS\data
-call %PROGRAM_DATA%\WAAS\appserver\silentStart.VBS
+xcopy /e /v %APPDIR% %PROGRAM_DATA%\WAAS\app
+copy  appsetup\createshortcut.vbs %PROGRAM_DATA%\WAAS\
+
+cd /D %APP_DATA%\appserver\
+wscript silentStart.VBS
+
+wscript C:\ProgramData\WAAS\createshortcut.VBS
 timeout /t 10
-echo please run ui bat file to launch and run.
+echo installtion completed.
 GOTO:EOF

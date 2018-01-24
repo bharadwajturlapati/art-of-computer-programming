@@ -1,0 +1,51 @@
+{
+	"id": "1ec06e25-eb5f-2373-dbc8-45656c75a126",
+	"name": "SyncRestXML",
+	"description": "SyncRestXML",
+	"order": [
+		"48085b88-a9e5-b829-a302-3d6ea9a3abee"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1508992454865,
+	"owner": "1466300",
+	"public": false,
+	"requests": [
+		{
+			"id": "48085b88-a9e5-b829-a302-3d6ea9a3abee",
+			"headers": "Content-Type: application/json\nx-kony-authorization: eyAidHlwIjogImp3dCIsICJhbGciOiAiTk9ORSIgfQ.eyAiX2VtYWlsIjogImJhbGFqaS5kZXZhbmlAa29ueS5jb20iLCAiX3ZlciI6ICJ2MS4xIiwgImlzcyI6ICJodHRwczovL2FjY291bnRzLmF1dGgua29ueWNsb3VkLmNvbSIsICJfc2NvcGUiOiAiZyIsICJfaXNzbWV0YSI6ICIvbWV0YWRhdGEvdTFuSVhJYUhWajRYYTBVN2ZDM29Jdz09IiwgIl9zZXNzaW9uX2lkIjogIjJjNzUyOGNiLTVjZDEtNDJlMS05Njc3LWM0NGNjY2M1YTk2NSIsICJfcHVpZCI6IDQ2Mjc5MzgzMTU3ODQsICJfaWRwIjogImtvbnlfYWNjb3VudHMiLCAiZXhwIjogMTUwODk5Nzk4MSwgImlhdCI6IDE1MDg5OTQzODEsICJfc2Vzc2lvbl90aWQiOiAiYWNjb3VudHMiLCAiX3Byb3ZfdXNlcmlkIjogImJiYTRmNzk1LTFmMGItNGRjNi05ZGQ2LWE2ZGY2NmU1MjA3NiIsICJqdGkiOiAiMDNlZDE1OTgtZWY5OC00N2FmLTk2NDItN2NlMmRhNjgyMjE4IiwgIl9hY3MiOiAiYWNjb3VudHMiIH0.MCwCFELKrQzWn_qE8wXeOWYuqmUDzLJkAhRLPoJI5UpNkOkcmKI2jkwwdH0n3A\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-kony-authorization",
+					"value": "eyAidHlwIjogImp3dCIsICJhbGciOiAiTk9ORSIgfQ.eyAiX2VtYWlsIjogImJhbGFqaS5kZXZhbmlAa29ueS5jb20iLCAiX3ZlciI6ICJ2MS4xIiwgImlzcyI6ICJodHRwczovL2FjY291bnRzLmF1dGgua29ueWNsb3VkLmNvbSIsICJfc2NvcGUiOiAiZyIsICJfaXNzbWV0YSI6ICIvbWV0YWRhdGEvdTFuSVhJYUhWajRYYTBVN2ZDM29Jdz09IiwgIl9zZXNzaW9uX2lkIjogIjJjNzUyOGNiLTVjZDEtNDJlMS05Njc3LWM0NGNjY2M1YTk2NSIsICJfcHVpZCI6IDQ2Mjc5MzgzMTU3ODQsICJfaWRwIjogImtvbnlfYWNjb3VudHMiLCAiZXhwIjogMTUwODk5Nzk4MSwgImlhdCI6IDE1MDg5OTQzODEsICJfc2Vzc2lvbl90aWQiOiAiYWNjb3VudHMiLCAiX3Byb3ZfdXNlcmlkIjogImJiYTRmNzk1LTFmMGItNGRjNi05ZGQ2LWE2ZGY2NmU1MjA3NiIsICJqdGkiOiAiMDNlZDE1OTgtZWY5OC00N2FmLTk2NDItN2NlMmRhNjgyMjE4IiwgIl9hY3MiOiAiYWNjb3VudHMiIH0.MCwCFELKrQzWn_qE8wXeOWYuqmUDzLJkAhRLPoJI5UpNkOkcmKI2jkwwdH0n3A",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://prodsanity-73.sync.konycloud.com/syncservice/api/1000000020bc11b43/download",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508995807218,
+			"name": "sync rest xml download",
+			"description": "sync rest xml download\ndownload call rest xml",
+			"collectionId": "1ec06e25-eb5f-2373-dbc8-45656c75a126",
+			"responses": [],
+			"rawModeData": "deviceID=testdevice5&scopename=s1&strategy=OTA_Sync&enablebatching=false&batchsize=500&appversion=cfea0d20cbc12209cf15b559cc8e9ab554c27a4c6e1d989814372c0a8df78c9a"
+		}
+	]
+}

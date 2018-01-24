@@ -2,7 +2,7 @@
  * Author : Bharadwaj Turlapati
  */
 const {app, BrowserWindow} = require('electron');
-const electron = require('electron')
+const electron = require('electron');
 const path = require('path');
 const url = require('url');
 

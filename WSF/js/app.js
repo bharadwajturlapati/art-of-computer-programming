@@ -24,17 +24,13 @@ function quickAccessModel(inputpath, locaname, id){
 }
 
 function initAddQuickAccessTab(){
-	fetch("http://127.0.0.1:8000/waas/api/quickaccess/",{
-    	method: "GET"
-	})
-	.then(function(res){ return res.json(); })
-	.then(function(data){ loadData(data); });
+	quickaccessDbService.getAllData(loadData)
 }
 
 function loadData(data){
 	for(var i=0; i<data.length; i++){
 		var eachJson = data[i];
-		addLocation(eachJson.fileurl, eachJson.nickname, eachJson.id);
+		addLocation(eachJson.fileurl, eachJson.shortname, eachJson.data_id);
 	}
 }
 
